@@ -1,0 +1,100 @@
+.partner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+#brander-photo {
+  width: 70%;
+  height: 550px;
+}
+
+.partner button {
+  background-color: purple;
+  color: white;
+  width: 250px;
+  height: 50px;
+  border-radius: 40px;
+  font-size: 22px;
+  border: none;
+}
+
+.partner button:hover{
+    background-color: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+.partner h1 {
+  font-size: 36px;
+}
+.partner h2 {
+  font-size: 32px;
+}
+
+.partner-bottom p, .steps p, #p1 {
+  text-align: left;
+  font-size: 26px;
+}
+
+#btn1 {
+  margin-top: 1em;
+}
+
+#p1 {
+  max-width: 60%;
+}
+
+.steps {
+  max-width: 70%;
+  margin-bottom: 1em;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+.partner-step {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+.step img {
+  width: 50%;
+  height: 400px;
+}
+.partner-bottom {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+.partner a{
+    font-size: 22px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 100%;
+  max-width: 80%;
+}
+footer > img {
+  max-width: 40%;
+}
+
+#p {
+  max-width: 40%;
+}
+
+.footer-side {
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+}

@@ -1,0 +1,148 @@
+.defaultPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85vh;
+  width: 100%;
+}
+
+.carousel {
+  max-width: 75%;
+  max-height: 10%;
+  z-index: 0;
+}
+
+.carousel-inside {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-inside button {
+  margin-top: 15%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  /* background-color: transparent;
+    backdrop-filter: blur(3px);
+    color: white;
+    border: 1px solid white; */
+  height: 50px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes carousel-button {
+  0% {
+    background-color: rgb(100, 100, 100);
+  }
+  25% {
+    background-color: rgb(75, 75, 75);
+  }
+  50% {
+    background-color: rgb(50, 50, 50);
+  }
+  75% {
+    background-color: rgb(25, 25, 25);
+  }
+  100% {
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+.carousel-inside button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  animation: carousel-button 0.5s linear  ;
+}
+
+.product-section {
+  margin-top: 53px;
+  text-align: center;
+  z-index: 0;
+}
+.product-section > h1 {
+  color: purple;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.wide-ads {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 100%;
+}
+.wide-ads img {
+  height: 100%;
+  max-width: 50%;
+}
+.wide-ads-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  max-width: 45%;
+}
+
+.wide-ads-side p {
+  max-width: 90%;
+}
+
+.wide-ads-side button {
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  border-radius: 30px;
+  border: 1px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.wide-ads-side button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 100%;
+  max-width: 80%;
+}
+footer > img {
+  max-width: 40%;
+}
+
+#p{
+    max-width: 40%;
+}
+
+.footer-side {
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+}
