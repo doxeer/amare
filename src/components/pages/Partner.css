@@ -1,3 +1,4 @@
+
 .partner {
   display: flex;
   flex-direction: column;
@@ -21,8 +22,8 @@
   border: none;
 }
 
-.partner button:hover{
-    background-color: white;
+.partner button:hover {
+  background-color: white;
   color: purple;
   border: 1px solid purple;
 }
@@ -30,6 +31,7 @@
 .partner h1 {
   font-size: 36px;
 }
+
 .partner h2 {
   font-size: 32px;
 }
@@ -57,23 +59,26 @@
   flex-direction: row;
   gap: 2em;
 }
+
 .partner-step {
   display: flex;
   flex-direction: column;
   max-width: 50%;
 }
+
 .step img {
   width: 50%;
   height: 400px;
 }
+
 .partner-bottom {
   display: flex;
   flex-direction: column;
   max-width: 70%;
 }
 
-.partner a{
-    font-size: 22px;
+.partner a {
+  font-size: 22px;
 }
 
 footer {
@@ -85,6 +90,7 @@ footer {
   width: 100%;
   max-width: 80%;
 }
+
 footer > img {
   max-width: 40%;
 }
@@ -97,4 +103,193 @@ footer > img {
   display: flex;
   flex-direction: column;
   max-width: 20%;
+}
+
+/* Medya Sorguları */
+
+@media (max-width: 1200px) {
+  #brander-photo {
+    width: 80%;
+    height: 450px;
+  }
+
+  .partner button {
+    width: 220px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .partner h1 {
+    font-size: 32px;
+  }
+
+  .partner h2 {
+    font-size: 28px;
+  }
+
+  .partner-bottom p, .steps p, #p1 {
+    font-size: 24px;
+  }
+
+  #p1 {
+    max-width: 65%;
+  }
+
+  .steps {
+    max-width: 75%;
+  }
+
+  .step img {
+    width: 55%;
+    height: 350px;
+  }
+
+  .partner-step {
+    max-width: 60%;
+  }
+
+  .partner-bottom {
+    max-width: 75%;
+  }
+
+  footer > img {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  #brander-photo {
+    width: 90%;
+    height: 350px;
+  }
+
+  .partner button {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .partner h1 {
+    font-size: 28px;
+  }
+
+  .partner h2 {
+    font-size: 24px;
+  }
+
+  .partner-bottom p, .steps p, #p1 {
+    font-size: 22px;
+  }
+
+  #p1 {
+    max-width: 70%;
+  }
+
+  .steps {
+    max-width: 80%;
+  }
+
+  .step {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .step img {
+    width: 100%;
+    height: auto;
+  }
+
+  .partner-step {
+    max-width: 70%;
+  }
+
+  .partner-bottom {
+    max-width: 80%;
+  }
+
+  footer > img {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #brander-photo {
+    width: 100%;
+    height: 300px;
+  }
+
+  .partner button {
+    width: 180px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .partner h1 {
+    font-size: 24px;
+  }
+
+  .partner h2 {
+    font-size: 20px;
+  }
+
+  .partner-bottom p, .steps p, #p1 {
+    font-size: 20px;
+  }
+
+  #p1 {
+    max-width: 80%;
+  }
+
+  .steps {
+    max-width: 90%;
+  }
+
+  .partner-step {
+    max-width: 80%;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  footer > img {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  #brander-photo {
+    height: 250px;
+  }
+
+  .partner button {
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .partner h1 {
+    font-size: 20px;
+  }
+
+  .partner h2 {
+    font-size: 18px;
+  }
+
+  .partner-bottom p, .steps p, #p1 {
+    font-size: 18px;
+  }
+
+  #p1 {
+    max-width: 90%;
+  }
+
+  .partner-step {
+    max-width: 90%;
+  }
+
+  footer > img {
+    max-width: 70%;
+  }
 }
