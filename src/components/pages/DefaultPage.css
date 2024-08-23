@@ -33,10 +33,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
-  /* background-color: transparent;
-    backdrop-filter: blur(3px);
-    color: white;
-    border: 1px solid white; */
   height: 50px;
   width: 100px;
   border: none;
@@ -65,7 +61,7 @@
   background-color: black;
   color: white;
   border: 1px solid white;
-  animation: carousel-button 0.5s linear  ;
+  animation: carousel-button 0.5s linear;
 }
 
 .product-section {
@@ -73,9 +69,11 @@
   text-align: center;
   z-index: 0;
 }
+
 .product-section > h1 {
   color: purple;
 }
+
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -90,10 +88,12 @@
   height: 400px;
   width: 100%;
 }
+
 .wide-ads img {
   height: 100%;
   max-width: 50%;
 }
+
 .wide-ads-side {
   display: flex;
   flex-direction: column;
@@ -132,16 +132,120 @@ footer {
   width: 100%;
   max-width: 80%;
 }
+
 footer > img {
   max-width: 40%;
 }
 
-#p{
-    max-width: 40%;
+#p {
+  max-width: 40%;
 }
 
 .footer-side {
   display: flex;
   flex-direction: column;
   max-width: 20%;
+}
+
+/* Medya Sorguları */
+
+@media (max-width: 1200px) {
+  .carousel {
+    max-width: 85%;
+  }
+
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .wide-ads img {
+    max-width: 60%;
+  }
+  
+  .wide-ads-side {
+    max-width: 50%;
+  }
+  
+  footer > img {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel {
+    max-width: 90%;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .wide-ads {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .wide-ads img {
+    max-width: 100%;
+  }
+  
+  .wide-ads-side {
+    max-width: 100%;
+  }
+  
+  footer > img {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-inside button {
+    height: 40px;
+    width: 80px;
+  }
+
+  .product-section > h1 {
+    font-size: 1.5em;
+  }
+
+  .products {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .wide-ads img {
+    max-width: 100%;
+  }
+  
+  .wide-ads-side {
+    max-width: 100%;
+  }
+  
+  footer {
+    flex-direction: column;
+    height: auto;
+  }
+
+  footer > img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-inside button {
+    height: 35px;
+    width: 70px;
+  }
+
+  .product-section > h1 {
+    font-size: 1.2em;
+  }
+
+  .wide-ads-side button {
+    height: 35px;
+    width: 80px;
+  }
+  
+  footer > img {
+    max-width: 90%;
+  }
 }
