@@ -44,8 +44,8 @@ function DefaultPage() {
       <div className="product-section">
         <h1>NEW PRODUCTS</h1>
         <div className="products">
-          <Product Url={product1} text="Product 1" price={"17.90$"} />
-          <Product Url={product2} text="Product 2" price={"20.10$"} />
+          <Product Url={product1} text="Amare EDGE" price={"78.95$"} />
+          <Product Url={product2} text="MentaBiotics®" price={"73.95$"} />
           <Product Url={product3} text="Product 3" price={"35.35$"} />
           <Product Url={product4} text="Product 4" price={"5.85$"} />
           {/* <Product Url={product4} text="Product 4" price={'5.85$'}/> */}
