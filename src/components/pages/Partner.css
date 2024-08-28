@@ -20,6 +20,7 @@
   border-radius: 40px;
   font-size: 22px;
   border: none;
+  cursor:  pointer;
 }
 
 .partner button:hover {
