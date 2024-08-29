@@ -191,6 +191,8 @@ footer > img {
   
   .wide-ads-side {
     max-width: 100%;
+    text-align: center;
+    padding: 20px;
   }
   
   footer > img {
@@ -214,10 +216,13 @@ footer > img {
 
   .wide-ads img {
     max-width: 100%;
+    margin-bottom: 20px;
   }
   
   .wide-ads-side {
     max-width: 100%;
+    text-align: center;
+    padding: 20px;
   }
   
   footer {
@@ -247,5 +252,10 @@ footer > img {
   
   footer > img {
     max-width: 90%;
+  }
+
+  .footer-side {
+    max-width: 100%;
+    text-align: center;
   }
 }
