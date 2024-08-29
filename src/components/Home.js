@@ -8,7 +8,7 @@ function Home() {
     <div className="home">
       <div className="promo-code">Get a $10 off Coupon Promo Code:1942935</div>
       <nav>
-        <div className="logo" onClick={() => navigate("/home")}></div>
+        <div className="logo" onClick={() => navigate("/")}></div>
         <div className="nav-button" onClick={() => navigate("products")}>
           PRODUCTS
         </div>

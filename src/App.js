@@ -13,8 +13,8 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Home />}>
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="/" element={<Home />}>
           <Route index element={<DefaultPage/>}/>
             <Route path="join-as-brand-partner" element={<Partner />} />
             <Route path="products" element={<Products />} />
