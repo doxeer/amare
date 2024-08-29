@@ -8,7 +8,7 @@ const products = [
     id: 1,
     name: "GBX Pep™ [12 Cans]",
     description: "Why You'll Love It Supports mental alertness and improved concentration.",
-    price: "$34.95",
+    price: "$35.95",
     
     imageUrl: "https://via.placeholder.com/150",
     buyLink: "https://example.com/buy-gbx-pep"

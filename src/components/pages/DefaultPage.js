@@ -1,8 +1,5 @@
 import "./DefaultPage.css";
 import Slider from "react-slick";
-import image1 from "../images/image1.jpg";
-import image2 from "../images/image2.jpg";
-import image3 from "../images/image3.jpg";
 import product1 from "../images/product1.jpeg";
 import product2 from "../images/product2.jpeg";
 import product3 from "../images/product3.jpeg";
@@ -23,7 +20,11 @@ function DefaultPage() {
     autoplaySpeed: 3000,
   };
 
-  const images = [image1, image2, image3];
+  const images = [
+    `${process.env.PUBLIC_URL}/images/amarebanner.jpg`,
+    `${process.env.PUBLIC_URL}/images/amarebanner2.jpg`
+  ];
+  
 
   return (
     <div className="defaultPage" id="start">
@@ -45,10 +46,10 @@ function DefaultPage() {
       <div className="product-section">
         <h1>NEW PRODUCTS</h1>
         <div className="products">
-          <Product Url={product1} text="Amare EDGE" price={"78.95$"} />
-          <Product Url={product2} text="MentaBiotics®" price={"73.95$"} />
-          <Product Url={product3} text="Product 3" price={"35.35$"} />
-          <Product Url={product4} text="Product 4" price={"5.85$"} />
+          <Product Url={product1} text="Amare EDGE" price={"78.95$"} alt="Amare EDGE Product" />
+          <Product Url={product2} text="MentaBiotics®" price={"73.95$"} alt="Amare MentaBiotics® " />
+          <Product Url={product3} text="Energy+™" price={"47.95$"} alt="Amare Energy+ " />
+          <Product Url={product4} text="Amare EDGE™ Watermelon [Jar]" price={"78.95$"} alt="Amare EDGE™ Watermelon [Jar]" />
         </div>
       </div>
 
@@ -62,7 +63,7 @@ function DefaultPage() {
             Raspberry Hibiscus. Try it individually or bundled with your
             favorites!
           </p>
-          <button>Shop Now</button>
+          <a href="https://www.amare.com/1942935/en-us/MentaBioticsRaspberryHibiscus"><button>Shop Now</button></a>
         </div>
       </div>
 
@@ -77,7 +78,7 @@ function DefaultPage() {
             kids to wind down and fall asleep. Say goodbye to bedtime battles
             and hello to a peaceful night's sleep with the help of Kids Calm.
           </p>
-          <button>Shop Now</button>
+          <a href="https://www.amare.com/1942935/en-us/kids-calm"><button>Shop Now</button> </a>
         </div>
         <img src={ad2} alt="Ad 2" />
       </div>
