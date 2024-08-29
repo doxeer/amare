@@ -4,6 +4,8 @@ import product1 from "../images/product1.jpeg";
 import product2 from "../images/product2.jpeg";
 import product3 from "../images/product3.jpeg";
 import product4 from "../images/product4.jpeg";
+import amarebanner1 from "../images/amarebanner.JPG";
+import amarebanner2 from "../images/amarebanner2.JPG";
 import ad1 from "../images/ad1.jpeg";
 import ad2 from "../images/ad2.jpeg";
 import Product from "./Product";
@@ -20,10 +22,7 @@ function DefaultPage() {
     autoplaySpeed: 3000,
   };
 
-  const images = [
-    `${process.env.PUBLIC_URL}/images/amarebanner.jpg`,
-    `${process.env.PUBLIC_URL}/images/amarebanner2.jpg`
-  ];
+  const images = [amarebanner1, amarebanner2];
   
 
   return (
