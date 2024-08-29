@@ -19,28 +19,29 @@ function DefaultPage() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   const images = [image1, image2, image3];
 
   return (
     <div className="defaultPage" id="start">
-      <div className="bottom">
-        <div className="carousel">
-          <Slider {...settings}>
-            {images.map((img, index) => (
-              <div className="carousel-inside" key={index}>
-                <img
-                  src={img}
-                  alt={`Slide ${index}`}
-                  style={{ width: "100%", maxHeight: "600px" }}
-                />
-                <button>Shop Now</button>
-              </div>
-            ))}
-          </Slider>
-        </div>
+      <div className="carousel">
+        <Slider {...settings}>
+          {images.map((img, index) => (
+            <div className="carousel-slide" key={index}>
+              <img
+                src={img}
+                alt={`Slide ${index}`}
+                className="carousel-image"
+              />
+              <button className="carousel-button">Shop Now</button>
+            </div>
+          ))}
+        </Slider>
       </div>
+
       <div className="product-section">
         <h1>NEW PRODUCTS</h1>
         <div className="products">
@@ -48,11 +49,11 @@ function DefaultPage() {
           <Product Url={product2} text="MentaBiotics®" price={"73.95$"} />
           <Product Url={product3} text="Product 3" price={"35.35$"} />
           <Product Url={product4} text="Product 4" price={"5.85$"} />
-          {/* <Product Url={product4} text="Product 4" price={'5.85$'}/> */}
         </div>
       </div>
+
       <div className="wide-ads">
-        <img src={ad1} />
+        <img src={ad1} alt="Ad 1" />
         <div className="wide-ads-side">
           <h1>Enjoy MentaBiotics® Raspberry Hibiscus</h1>
           <p>
@@ -64,6 +65,7 @@ function DefaultPage() {
           <button>Shop Now</button>
         </div>
       </div>
+
       <div className="wide-ads">
         <div className="wide-ads-side">
           <h1>Kids Calm</h1>
@@ -77,10 +79,11 @@ function DefaultPage() {
           </p>
           <button>Shop Now</button>
         </div>
-        <img src={ad2}/>
+        <img src={ad2} alt="Ad 2" />
       </div>
+
       <footer>
-        <img src={amare} />
+        <img src={amare} alt="Amare" />
         <p id="p">
           This is an Amare Global Independent Distributor website. This site is
           not owned or operated by Amare Global. Any information, views, or
@@ -89,12 +92,12 @@ function DefaultPage() {
           Official Amare Website Amare Brand Partner #1942935
         </p>
         <div className="footer-side">
+          <h4 id="h4">Customer Service</h4>
           <p>
-            <h4 id="h4">Customer Service</h4>
             If you have any questions about your order, please contact customer
             service:
-            <p>Phone: +1 888-898-8551</p>
           </p>
+          <p>Phone: +1 888-898-8551</p>
         </div>
       </footer>
     </div>
