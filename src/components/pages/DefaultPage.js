@@ -36,7 +36,7 @@ function DefaultPage() {
                 alt={`Slide ${index}`}
                 className="carousel-image"
               />
-              <button className="carousel-button">Shop Now</button>
+              <a href="https://www.amare.com/1942935/en-us/shop-all"><button className="carousel-button">Shop Now</button></a>
             </div>
           ))}
         </Slider>
