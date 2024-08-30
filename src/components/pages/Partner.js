@@ -9,7 +9,7 @@ function Partner() {
   return (
     <div className="partner">
       <img src={branderPhoto} id="brander-photo" />
-      <button id="btn1">Enroll Today</button>
+      <a href="https://www.amare.com/1942935/en-us/account/register"><button id="btn1">Enroll Today</button></a>
       <h2>Join as an Amare Partner</h2>
       <h1>What does it mean to be an Amare Partner?</h1>
       <p id="p1">
@@ -34,7 +34,7 @@ function Partner() {
             marginBottom: "2em",
           }}
         >
-          <button>Become a partner</button>
+          <a href="https://www.amare.com/1942935/en-us/account/register"><button>Become a partner</button></a>
         </div>
         <div className="step">
           <img src={step2} />
@@ -67,7 +67,7 @@ function Partner() {
               Share award winning best in class products each one backed by
               scientific research proven to deliver results.
             </p>
-            <button>Make a difference</button>
+            <a href="https://www.amare.com/1942935/en-us/account/register"><button>Make a difference</button></a>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ function Partner() {
             
           }}
         >
-          <button>Become a partner</button>
+          <a href="https://www.amare.com/1942935/en-us/account/register"><button>Become a partner</button></a>
         </div>
       </div>
       <footer>
