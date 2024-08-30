@@ -1,13 +1,13 @@
 import React from "react";
 import "./Product.css";
 
-function Product({ Url, text, price}) {
+function Product({ Url, text, price, href}) {
   return (
     <div className="product">
       <img src={Url} alt={text} />
       <h3>{text}</h3>
       <h4>{price}</h4>
-      <button>BUY NOW</button>
+      <a href={href}><button>BUY NOW</button></a>
     </div>
   );
 }

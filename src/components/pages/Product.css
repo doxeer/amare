@@ -6,7 +6,7 @@
   height: 400px;
   width: 300px;
 }
-.product > button {
+.product > a > button {
   background-color: purple;
   color: white;
   border-radius: 20px;
@@ -15,7 +15,7 @@
   border: none;
   cursor: pointer;
 }
-.product > button:hover {
+.product > a > button:hover {
   background-color: white;
   color: purple;
   border: 1px solid purple;

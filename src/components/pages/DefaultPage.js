@@ -23,7 +23,6 @@ function DefaultPage() {
   };
 
   const images = [amarebanner1, amarebanner2];
-  
 
   return (
     <div className="defaultPage" id="start">
@@ -36,7 +35,9 @@ function DefaultPage() {
                 alt={`Slide ${index}`}
                 className="carousel-image"
               />
-              <a href="https://www.amare.com/1942935/en-us/shop-all"><button className="carousel-button">Shop Now</button></a>
+              <a href="https://www.amare.com/1942935/en-us/shop-all">
+                <button className="carousel-button">Shop Now</button>
+              </a>
             </div>
           ))}
         </Slider>
@@ -45,10 +46,34 @@ function DefaultPage() {
       <div className="product-section">
         <h1>NEW PRODUCTS</h1>
         <div className="products">
-          <Product Url={product1} text="Amare EDGE" price={"78.95$"} alt="Amare EDGE Product" />
-          <Product Url={product2} text="MentaBiotics®" price={"73.95$"} alt="Amare MentaBiotics® " />
-          <Product Url={product3} text="Energy+™" price={"47.95$"} alt="Amare Energy+ " />
-          <Product Url={product4} text="Amare EDGE™ Watermelon [Jar]" price={"78.95$"} alt="Amare EDGE™ Watermelon [Jar]" />
+          <Product
+            Url={product1}
+            text="Amare EDGE"
+            price={"78.95$"}
+            alt="Amare EDGE Product"
+            href={"https://www.amare.com/1942935/en-us/amareedgegrape"}
+          />
+          <Product
+            Url={product2}
+            text="MentaBiotics®"
+            price={"73.95$"}
+            alt="Amare MentaBiotics® "
+            href={"https://www.amare.com/1942935/en-us/MentaBioticsSugarFree"}
+          />
+          <Product
+            Url={product3}
+            text="Energy+™"
+            price={"47.95$"}
+            alt="Amare Energy+ "
+            href={"https://www.amare.com/1942935/en-us/EnergyPlusSugarFree"}
+          />
+          <Product
+            Url={product4}
+            text="Amare EDGE™ Watermelon [Jar]"
+            price={"78.95$"}
+            alt="Amare EDGE™ Watermelon [Jar]"
+            href={"https://www.amare.com/1942935/en-us/amareedge"}
+          />
         </div>
       </div>
 
@@ -62,7 +87,9 @@ function DefaultPage() {
             Raspberry Hibiscus. Try it individually or bundled with your
             favorites!
           </p>
-          <a href="https://www.amare.com/1942935/en-us/MentaBioticsRaspberryHibiscus"><button>Shop Now</button></a>
+          <a href="https://www.amare.com/1942935/en-us/MentaBioticsRaspberryHibiscus">
+            <button>Shop Now</button>
+          </a>
         </div>
       </div>
 
@@ -77,7 +104,9 @@ function DefaultPage() {
             kids to wind down and fall asleep. Say goodbye to bedtime battles
             and hello to a peaceful night's sleep with the help of Kids Calm.
           </p>
-          <a href="https://www.amare.com/1942935/en-us/kids-calm"><button>Shop Now</button> </a>
+          <a href="https://www.amare.com/1942935/en-us/kids-calm">
+            <button>Shop Now</button>{" "}
+          </a>
         </div>
         <img src={ad2} alt="Ad 2" />
       </div>
