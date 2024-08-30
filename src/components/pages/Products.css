@@ -1,54 +1,79 @@
 .product-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.product-card {
+  border: 1px solid #e1e1e1;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  height: 100%; /* Kartların aynı yükseklikte olmasını sağlar */
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.product-content {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h3 {
+  margin-bottom: 10px; /* Başlıklar için boşluk bırakır */
+  margin-top: auto;
+}
+
+p {
+  margin-bottom: 10px;/* Paragraflar için boşluk bırakır */
+  margin-top: auto;
+}
+
+.price {
+  margin: 10px 0;
+  margin-top: auto;
+}
+
+.new-price {
+  color: #cf2127;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5c2d91;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto; /* Butonu kartın alt kısmına sabitler */
+}
+
+.buy-button:hover {
+  background-color: #421f66;
+}
+
+@media (max-width: 1024px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .product-card {
-    border: 1px solid #e1e1e1;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  .product-image {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 15px;
-  }
-  
-  .price {
-    margin: 10px 0;
-  }
-  
-  .new-price {
-    color: #cf2127;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-   .buy-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #5c2d91;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .buy-button:hover {
-    background-color: #421f66;
-  }
-  
-  @media (max-width: 1024px) {
-    .product-list {
-      grid-template-columns: repeat(2, 1fr); /* Orta boyutlu ekranlarda 2 sütun */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .product-list {
-      grid-template-columns: repeat(1, 1fr); /* Küçük ekranlarda tek sütun */
-    }
-  }
+}
