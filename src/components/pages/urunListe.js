@@ -37,6 +37,7 @@ const urunListe = [
       imageUrl: `${process.env.PUBLIC_URL}/images/AmareEDGE.png`,
       alt: "Amare EDGE Product",
       buyLink: "https://www.amare.com/1942935/en-us/amareedge-plus-mango-2pack",
+      linkName: "amare-edge-plus"
     },
     {
       id: 3,
@@ -46,6 +47,7 @@ const urunListe = [
       imageUrl: `${process.env.PUBLIC_URL}/images/amareedgegrape.png`,
       alt: "Amare EDGE+",
       buyLink: "https://www.amare.com/1942935/en-us/amareedge-plus-grape-2pack",
+      linkName: "amare-edge-plus"
     },
     {
       id: 4,
@@ -54,8 +56,9 @@ const urunListe = [
       price: "$155.95",
       imageUrl: `${process.env.PUBLIC_URL}/images/edgewatermelon.png`,
       alt: "Amare EDGE™ Watermelon [Jar]",
-      buyLink:
-        "https://www.amare.com/1942935/en-us/amareedge-plus-watermelon-2pack",
+      buyLink:"https://www.amare.com/1942935/en-us/amareedge-plus-watermelon-2pack",
+      linkName: "amare-edge-watermelon-jar"
+
     },
     {
       id: 5,
@@ -66,6 +69,7 @@ const urunListe = [
       imageUrl: FundaMentalsPack,
       alt: "Amare FundaMentals Pack",
       buyLink: "https://www.amare.com/1942935/en-us/fundamentals-pack-rh",
+      linkName: "amare-fundaMentals-pack"
     },
     {
       id: 6,
@@ -76,6 +80,7 @@ const urunListe = [
       imageUrl: VarietyPack,
       alt: "Amare EDGE® Variety Pack",
       buyLink: "https://www.amare.com/1942935/en-us/amareedge-variety-pack",
+      linkName: "amare-edge-variety-pack"
     },
     {
       id: 7,
@@ -85,6 +90,7 @@ const urunListe = [
       imageUrl: AmareEDGE,
       alt: "Amare EDGE®",
       buyLink: "https://www.amare.com/1942935/en-us/amareedgewatermelon",
+      linkName: "amare-edge"
     },
     {
       id: 8,
@@ -95,6 +101,7 @@ const urunListe = [
       imageUrl: MentaBiotics,
       alt: "MentaBiotics",
       buyLink: "https://www.amare.com/1942935/en-us/MentaBioticsSugarFreeSP",
+      linkName: "mentaBiotics"
     },
     {
       id: 9,
@@ -105,6 +112,8 @@ const urunListe = [
       imageUrl: MentaFocus,
       alt: "MentaFocus",
       buyLink: "https://www.amare.com/1942935/en-us/MentaFocus",
+      linkName: "mentaFocus"
+
     },
     {
       id: 10,
@@ -114,6 +123,7 @@ const urunListe = [
       imageUrl: EnergyPlus,
       alt: "EnergyPlus",
       buyLink: "https://www.amare.com/1942935/en-us/EnergyPlus",
+      linkName: "energy-plus"
     },
     {
       id: 11,
@@ -123,6 +133,7 @@ const urunListe = [
       imageUrl: EnergyPlusdragon,
       alt: "EnergyPlusdragonSugarFree",
       buyLink: "https://www.amare.com/1942935/en-us/EnergyPlusSugarFree",
+      linkName: "energy-plus-dragon-fruit"
     },
     {
       id: 12,
@@ -133,6 +144,7 @@ const urunListe = [
       imageUrl: MentaSync,
       alt: "MentaSync",
       buyLink: "https://www.amare.com/1942935/en-us/MentaSync",
+      linkName: "mentaSync"
     },
     {
       id: 13,
@@ -143,6 +155,7 @@ const urunListe = [
       imageUrl: MentaHeart,
       alt: "MentaHeart",
       buyLink: "https://www.amare.com/1942935/en-us/MentaHeart",
+      linkName: "mentaHeart"
     },
     {
       id: 14,
@@ -153,6 +166,7 @@ const urunListe = [
       imageUrl: moodplus,
       alt: "moodplus",
       buyLink: "https://www.amare.com/1942935/en-us/MoodPlus",
+      linkName: "mood-plus"
     },
     {
       id: 15,
@@ -163,6 +177,7 @@ const urunListe = [
       imageUrl: Gbxsuperfood,
       alt: "Gbxsuperfood",
       buyLink: "https://www.amare.com/1942935/en-us/GBXSuperFood",
+      linkName: "gbx-super-food"
     },
     {
       id: 16,
@@ -173,6 +188,7 @@ const urunListe = [
       imageUrl: KidsMoodplus,
       alt: "KidsMoodplus",
       buyLink: "https://www.amare.com/1942935/en-us/KidsMoodPlus",
+      linkName: "kids-mood-plus"
     },
     {
       id: 17,
@@ -183,6 +199,7 @@ const urunListe = [
       imageUrl: Gbxfit,
       alt: "Amare GBX FIT™",
       buyLink: "https://www.amare.com/1942935/en-us/gbxfit",
+      linkName: "amare-gbx-fit"
     },
     {
       id: 18,
@@ -193,6 +210,7 @@ const urunListe = [
       imageUrl: sleepplus,
       alt: "sleepplus",
       buyLink: "https://www.amare.com/1942935/en-us/SleepPlus",
+      linkName: "sleep-plus"
     },
     {
       id: 19,
@@ -203,6 +221,7 @@ const urunListe = [
       imageUrl: ommega,
       alt: "ommega",
       buyLink: "https://www.amare.com/1942935/en-us/OmMEGA",
+      linkName: "ommega"
     },
     {
       id: 20,
@@ -213,6 +232,7 @@ const urunListe = [
       imageUrl: Gbxprotein,
       alt: "GBX Protein",
       buyLink: "https://www.amare.com/1942935/en-us/GBXProteinPumpkinSpice",
+      linkName: "gbx-protein"
     },
   ];
   
