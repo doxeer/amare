@@ -21,6 +21,7 @@
   height: auto;
   margin-bottom: 15px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .product-content {
