@@ -26,7 +26,7 @@ const urunListe = [
       imageUrl: amarehappyjuicepack,
       alt: "amarehappyjuicepack",
       buyLink: "https://www.amare.com/1942935/en-us/happy-juice-boosters-pack",
-      linkName: "amare-happy-juice™-pack"
+      linkName: "amare-happy-juice-pack"
     },
     {
       id: 2,
