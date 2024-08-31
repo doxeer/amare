@@ -69,7 +69,7 @@ const urunListe = [
       imageUrl: FundaMentalsPack,
       alt: "Amare FundaMentals Pack",
       buyLink: "https://www.amare.com/1942935/en-us/fundamentals-pack-rh",
-      linkName: "amare-fundaMentals-pack"
+      linkName: "amare-fundamentals-pack"
     },
     {
       id: 6,
@@ -112,7 +112,7 @@ const urunListe = [
       imageUrl: MentaFocus,
       alt: "MentaFocus",
       buyLink: "https://www.amare.com/1942935/en-us/MentaFocus",
-      linkName: "mentaFocus"
+      linkName: "mentafocus"
 
     },
     {
