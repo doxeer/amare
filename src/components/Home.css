@@ -38,12 +38,12 @@ nav {
   width: 200px;
   margin-right: 45px;
   cursor: pointer;
-  background-color: white;
+  /* background-color: white; */
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50%;
-  background-image: url("./images/amare.png");
+  background-image: url("./images/logo.png");
 }
 
 .nav-button {
