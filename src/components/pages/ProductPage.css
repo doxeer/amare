@@ -103,7 +103,10 @@
     width: 100%;
     padding: 10px;
   }
-
+  .productpage img{
+    width: 320px;
+    height: 300px;
+  }
   .productpage-side button {
     width: 100px;
     height: 35px;
