@@ -14,7 +14,7 @@ function ProductCard({ product }) {
   return (
     <div>
       <Helmet>
-        <title>{product.name!= 'GBX Protein®' ? `${product.name} - Amare` : 'Amare'}</title>
+        <title>Amare - Products</title>
         <meta name="description" content={product.description} />
         <meta property="og:title" content={product.name} />
         <meta property="og:description" content={product.description} />
