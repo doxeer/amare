@@ -1,13 +1,13 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import urunListe from "./urunListe";
 import "./ProductPage.css";
 
 function ProductPage() {
-  const location = useLocation();
+  const { linkName } = useParams();  // Retrieve linkName from URL parameters
   const navigate = useNavigate();
-  const product = location.state;
-
-  // Eğer `state` boşsa kullanıcıyı ana sayfaya yönlendirin.
+  const product = urunListe.find((item) => item.linkName === linkName);  // Find product based on linkName
+  
   if (!product) {
     navigate("/", { replace: true });
     return null;

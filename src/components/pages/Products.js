@@ -4,14 +4,11 @@ import { useNavigate } from "react-router-dom";
 import urunListe from "./urunListe";
 import "./Products.css";
 
-
-
-
 function ProductCard({ product }) {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate(`/${product.linkName}`, { state: product });
+    navigate(`/product/${product.linkName}`);  // Use linkName for navigation
   };
 
   return (
@@ -53,7 +50,7 @@ function ProductCard({ product }) {
 const ProductList = () => (
   <div className="product-list">
     {urunListe.map((product) => (
-      <ProductCard key={product.id} product={product} />
+      <ProductCard key={product.linkName} product={product} />
     ))}
   </div>
 );
