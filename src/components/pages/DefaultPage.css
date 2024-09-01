@@ -72,7 +72,6 @@ body {
   gap: 10px;
 }
 
-/* Geniş Reklamlar Bölümü */
 .wide-ads {
   display: flex;
   flex-direction: row;
@@ -133,6 +132,7 @@ footer > img {
 #p {
   max-width: 40%;
   text-align: left;
+  margin-bottom: 50px;
 }
 
 .footer-side {
@@ -267,6 +267,7 @@ footer > img {
   .wide-ads-side button {
     height: 35px;
     width: 80px;
+    margin-bottom: 10px;
   }
 
   footer > img {

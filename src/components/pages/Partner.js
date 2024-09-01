@@ -9,26 +9,28 @@ import { Helmet } from "react-helmet-async";
 function Partner() {
   return (
     <div className="partner">
-      <Helmet>
-        <title>Amare - Partnership</title>
-        <meta
-          name="description"
-          content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
-        />
-        <meta
-          name="keywords"
-          content="Amare Partner, wellness, financial wellness, purpose-driven entrepreneurs, Amare Global"
-        />
-        <meta
-          property="og:title"
-          content="Join as an Amare Partner - Amare Global"
-        />
-        <meta
-          property="og:description"
-          content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
-        />
-        <meta property="og:image" content={branderPhoto} />
-      </Helmet>
+      <head>
+        <Helmet>
+          <title>Amare - Partnership</title>
+          <meta
+            name="description"
+            content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
+          />
+          <meta
+            name="keywords"
+            content="Amare Partner, wellness, financial wellness, purpose-driven entrepreneurs, Amare Global"
+          />
+          <meta
+            property="og:title"
+            content="Join as an Amare Partner - Amare Global"
+          />
+          <meta
+            property="og:description"
+            content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
+          />
+          <meta property="og:image" content={branderPhoto} />
+        </Helmet>
+      </head>
       <img src={branderPhoto} id="brander-photo" />
       <a href="https://www.amare.com/1942935/en-us/account/register">
         <button id="btn1">Enroll Today</button>

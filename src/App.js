@@ -23,6 +23,7 @@ function App() {
               <Route path="products" element={<Products />} />
               <Route path="kyani-products" element={<Kyani />} />
               <Route path="/:linkName" element={<ProductPage />} />
+             
             </Route>
           </Routes>
         </div>
