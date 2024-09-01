@@ -8,7 +8,7 @@ function ProductCard({ product }) {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate(`/product/${product.linkName}`);  // Use linkName for navigation
+    navigate(`/${product.linkName}`);  // Use linkName for navigation
   };
 
   return (
