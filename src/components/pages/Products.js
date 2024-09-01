@@ -8,24 +8,31 @@ function ProductCard({ product }) {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate(`/${product.linkName}`); // Use linkName for navigation
+    navigate(`/${product.linkName}`);
   };
 
   return (
     <div>
-      <head>
-        <Helmet>
-          <title>Amare - Products</title>
-          <meta name="description" content={product.description} />
-          <meta
-            name="keywords"
-            content={`${product.name}, ${product.description}, health products, wellness, Amare supplements`}
-          />
-          <meta property="og:title" content={product.name} />
-          <meta property="og:description" content={product.description} />
-          <meta property="og:image" content={product.imageUrl} />
-        </Helmet>
-      </head>
+      <Helmet>
+        <title>Amare - Products</title>
+        <meta name="description" content={product.description} />
+        <meta
+          name="keywords"
+          content={`${urunListe
+            .map((p) => `${p.name}, ${p.description}`)
+            .join(", ")}, health products, wellness, Amare supplements`}
+        />
+        <meta property="og:title" content={`${urunListe
+            .map((p) => `${p.name}`)
+            .join(", ")}`} />
+        <meta property="og:description" content={`${urunListe
+            .map((p) => `${p.description}`)
+            .join(", ")}`} />
+        <meta property="og:image" content={`${urunListe
+            .map((p) => `${p.imageUrl}`)
+            .join(", ")}`} />
+      </Helmet>
+
       <div className="product-card">
         <div onClick={handleNavigate} style={{ cursor: "pointer" }}>
           <img

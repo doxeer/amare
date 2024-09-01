@@ -4,9 +4,9 @@ import urunListe from "./urunListe";
 import "./ProductPage.css";
 
 function ProductPage() {
-  const { linkName } = useParams(); // Retrieve linkName from URL parameters
+  const { linkName } = useParams();
   const navigate = useNavigate();
-  const product = urunListe.find((item) => item.linkName === linkName); // Find product based on linkName
+  const product = urunListe.find((item) => item.linkName === linkName);
 
   if (!product) {
     navigate("/", { replace: true });
