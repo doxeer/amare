@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import "./ProductPage.css";
 
 function ProductPage() {
@@ -7,6 +8,13 @@ function ProductPage() {
 
   return (
     <div className="productpage">
+      <Helmet>
+        <title>{product.name}</title>
+        <meta name="description" content={product.description} />
+        <meta property="og:title" content={product.name} />
+        <meta property="og:description" content={product.description} />
+        <meta property="og:image" content={product.imageUrl} />
+      </Helmet>
       <div className="productpage-product">
         <img src={product.imageUrl} alt={product.name} />
         <div className="productpage-side">
@@ -17,7 +25,9 @@ function ProductPage() {
             Use Amare Promo Code 1942935 during checkout to save $10 off your
             first order.
           </small>
-          <a href={product.buyLink}><button>BUY NOW</button></a>
+          <a href={product.buyLink}>
+            <button>BUY NOW</button>
+          </a>
         </div>
       </div>
     </div>

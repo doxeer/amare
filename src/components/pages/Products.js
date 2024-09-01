@@ -1,11 +1,8 @@
-import "./Products.css";
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import "./Products.css";
 import urunListe from "./urunListe";
-
-
-
 
 function ProductCard({ product }) {
   const navigate = useNavigate();
@@ -16,6 +13,13 @@ function ProductCard({ product }) {
 
   return (
     <div className="product-card">
+      <Helmet>
+        <title>{product.name}</title>
+        <meta name="description" content={product.description} />
+        <meta property="og:title" content={product.name} />
+        <meta property="og:description" content={product.description} />
+        <meta property="og:image" content={product.imageUrl} />
+      </Helmet>
       <div onClick={handleNavigate} style={{ cursor: 'pointer' }}>
         <img
           src={product.imageUrl}
@@ -36,8 +40,6 @@ function ProductCard({ product }) {
     </div>
   );
 }
-
-
 
 const ProductList = () => (
   <div className="product-list">
