@@ -4,12 +4,31 @@ import step2 from "../images/step2.avif";
 import step3 from "../images/step3.avif";
 import step4 from "../images/step4.avif";
 import amare from "../images/amare.png";
+import { Helmet } from "react-helmet-async";
 
 function Partner() {
   return (
     <div className="partner">
+      <Helmet>
+        <title>Amare - Partnership</title>
+        <meta
+          name="description"
+          content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
+        />
+        <meta
+          property="og:title"
+          content="Join as an Amare Partner - Amare Global"
+        />
+        <meta
+          property="og:description"
+          content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
+        />
+        <meta property="og:image" content={branderPhoto} />
+      </Helmet>
       <img src={branderPhoto} id="brander-photo" />
-      <a href="https://www.amare.com/1942935/en-us/account/register"><button id="btn1">Enroll Today</button></a>
+      <a href="https://www.amare.com/1942935/en-us/account/register">
+        <button id="btn1">Enroll Today</button>
+      </a>
       <h2>Join as an Amare Partner</h2>
       <h1>What does it mean to be an Amare Partner?</h1>
       <p id="p1">
@@ -34,7 +53,9 @@ function Partner() {
             marginBottom: "2em",
           }}
         >
-          <a href="https://www.amare.com/1942935/en-us/account/register"><button>Become a partner</button></a>
+          <a href="https://www.amare.com/1942935/en-us/account/register">
+            <button>Become a partner</button>
+          </a>
         </div>
         <div className="step">
           <img src={step2} />
@@ -67,7 +88,9 @@ function Partner() {
               Share award winning best in class products each one backed by
               scientific research proven to deliver results.
             </p>
-            <a href="https://www.amare.com/1942935/en-us/account/register"><button>Make a difference</button></a>
+            <a href="https://www.amare.com/1942935/en-us/account/register">
+              <button>Make a difference</button>
+            </a>
           </div>
         </div>
       </div>
@@ -83,8 +106,12 @@ function Partner() {
           through the compensation plan. Earn from product sales, bonus pools,
           and much more.*
         </p>
-        <a href="https://amarecdn.azureedge.net/webassets/resources/OtherInformation/Amare_IncomeDisclosureStatement.pdf">Income Disclosure Statement</a>
-        <a href="https://www.nxtbook.com/amareglobal/WelcomeKit/amare-compensation-plan/index.php">Amare Compensation Plan</a>
+        <a href="https://amarecdn.azureedge.net/webassets/resources/OtherInformation/Amare_IncomeDisclosureStatement.pdf">
+          Income Disclosure Statement
+        </a>
+        <a href="https://www.nxtbook.com/amareglobal/WelcomeKit/amare-compensation-plan/index.php">
+          Amare Compensation Plan
+        </a>
         <p>
           <strong>Onboarding System:</strong> If you're completely brand new to
           social selling or a seasoned veteran, Amare will provide concierge
@@ -92,20 +119,21 @@ function Partner() {
           support the moment you become an Amare Partner.
         </p>
         <p>
-          <strong>Monthly Specials & Promotions:</strong> Gain access to promotions, generous
-          discount codes, free product credits, and loyalty reward programs.
-          These special offers are designed to help grow your business and sales
-          every month. So.... what are you waiting for?
+          <strong>Monthly Specials & Promotions:</strong> Gain access to
+          promotions, generous discount codes, free product credits, and loyalty
+          reward programs. These special offers are designed to help grow your
+          business and sales every month. So.... what are you waiting for?
         </p>
         <div
           style={{
             display: "flex",
             width: "100%",
             justifyContent: "center",
-            
           }}
         >
-          <a href="https://www.amare.com/1942935/en-us/account/register"><button>Become a partner</button></a>
+          <a href="https://www.amare.com/1942935/en-us/account/register">
+            <button>Become a partner</button>
+          </a>
         </div>
       </div>
       <footer>

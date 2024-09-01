@@ -10,6 +10,7 @@ import ad1 from "../images/ad1.jpeg";
 import ad2 from "../images/ad2.jpeg";
 import Product from "./Product";
 import amare from "../images/amare.png";
+import { Helmet } from "react-helmet-async";
 
 function DefaultPage() {
   const settings = {
@@ -26,6 +27,14 @@ function DefaultPage() {
 
   return (
     <div className="defaultPage" id="start">
+      <Helmet>
+        <title>Amare</title>
+        <meta name="description" content="Explore our range of Amare products including new arrivals and special offers." />
+        <meta property="og:title" content="Amare Products - Home" />
+        <meta property="og:description" content="Explore our range of Amare products including new arrivals and special offers." />
+        <meta property="og:image" content={amarebanner1} />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
       <div className="carousel">
         <Slider {...settings}>
           {images.map((img, index) => (
