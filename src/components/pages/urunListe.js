@@ -15,6 +15,7 @@ import Gbxfit from "../images/Gbxfit.png";
 import sleepplus from "../images/sleepplus.png";
 import ommega from "../images/ommega.png";
 import Gbxprotein from "../images/Gbxprotein.png";
+import { Link } from "react-router-dom";
 
 const urunListe = [
     {
@@ -235,5 +236,16 @@ const urunListe = [
       linkName: "gbx-protein"
     },
   ];
+  // Ürün listesini render ederken:
+urunListe.map(product => (
+  <div key={product.id}>
+    <Link 
+      to={`/${product.linkName}`} 
+      state={product} // ProductPage'e product objesini state olarak gönderiyoruz
+    >
+      {product.name}
+    </Link>
+  </div>
+));
   
   export default urunListe;

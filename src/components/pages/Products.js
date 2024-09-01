@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import urunListe from "./urunListe";
 import "./Products.css";
 
+
+
+
 function ProductCard({ product }) {
   const navigate = useNavigate();
 

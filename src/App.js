@@ -12,9 +12,9 @@ import ProductPage from "./components/pages/ProductPage";
 
 function App() {
   return (
-    <div className="app">
-      <HelmetProvider>
-        <BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <div className="app">
           <Routes>
             <Route path="/home" element={<Navigate to="/" replace />} />
             <Route path="/" element={<Home />}>
@@ -25,9 +25,9 @@ function App() {
               <Route path=":linkName" element={<ProductPage />} /> 
             </Route>
           </Routes>
-        </BrowserRouter>
-      </HelmetProvider>
-    </div>
+        </div>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
