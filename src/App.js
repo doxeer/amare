@@ -22,7 +22,7 @@ function App() {
               <Route path="join-as-brand-partner" element={<Partner />} />
               <Route path="products" element={<Products />} />
               <Route path="kyani-products" element={<Kyani />} />
-              <Route path=":linkName" element={<ProductPage />} /> {/* Bu satırı buraya taşıdık */}
+              <Route path=":linkName" element={<ProductPage />} /> 
             </Route>
           </Routes>
         </BrowserRouter>
