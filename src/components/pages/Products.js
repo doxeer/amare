@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
-import urunListe from './urunListe';
+import urunListe from "./urunListe";
 import "./Products.css";
 
 function ProductCard({ product }) {
@@ -16,6 +16,10 @@ function ProductCard({ product }) {
       <Helmet>
         <title>Amare - Products</title>
         <meta name="description" content={product.description} />
+        <meta
+          name="keywords"
+          content={`${product.name}, ${product.description}, health products, wellness, Amare supplements`}
+        />
         <meta property="og:title" content={product.name} />
         <meta property="og:description" content={product.description} />
         <meta property="og:image" content={product.imageUrl} />

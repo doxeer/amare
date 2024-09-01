@@ -16,6 +16,10 @@ function Partner() {
           content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
         />
         <meta
+          name="keywords"
+          content="Amare Partner, wellness, financial wellness, purpose-driven entrepreneurs, Amare Global"
+        />
+        <meta
           property="og:title"
           content="Join as an Amare Partner - Amare Global"
         />

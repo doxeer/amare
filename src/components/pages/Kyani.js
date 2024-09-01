@@ -68,6 +68,10 @@ const ProductList = () => (
         content="Explore our range of health supplements designed to support your wellness journey. Shop now for top products like GBX Pep, Digestive Enzymes, and Amare EDGE."
       />
       <meta
+        name="keywords"
+        content="health supplements, wellness, GBX Pep, Digestive Enzymes, Amare EDGE, Kyani Products"
+      />
+      <meta
         property="og:title"
         content="Our Products - Kyani Health Supplements"
       />
