@@ -4,10 +4,10 @@ import urunListe from "./urunListe";
 import "./ProductPage.css";
 
 function ProductPage() {
-  const { linkName } = useParams();  // Retrieve linkName from URL parameters
+  const { linkName } = useParams(); // Retrieve linkName from URL parameters
   const navigate = useNavigate();
-  const product = urunListe.find((item) => item.linkName === linkName);  // Find product based on linkName
-  
+  const product = urunListe.find((item) => item.linkName === linkName); // Find product based on linkName
+
   if (!product) {
     navigate("/", { replace: true });
     return null;
@@ -15,14 +15,19 @@ function ProductPage() {
 
   return (
     <div className="productpage">
-      <Helmet>
-        <title>{product.name}</title>
-        <meta name="description" content={product.description} />
-        <meta name="keywords" content={`${product.name}, ${product.description}, health supplements, wellness products`} />
-        <meta property="og:title" content={product.name} />
-        <meta property="og:description" content={product.description} />
-        <meta property="og:image" content={product.imageUrl} />
-      </Helmet>
+      <head>
+        <Helmet>
+          <title>{product.name}</title>
+          <meta name="description" content={product.description} />
+          <meta
+            name="keywords"
+            content={`${product.name}, ${product.description}, health supplements, wellness products`}
+          />
+          <meta property="og:title" content={product.name} />
+          <meta property="og:description" content={product.description} />
+          <meta property="og:image" content={product.imageUrl} />
+        </Helmet>
+      </head>
       <div className="productpage-product">
         <img src={product.imageUrl} alt={product.name} />
         <div className="productpage-side">
@@ -30,7 +35,8 @@ function ProductPage() {
           <div id="description">{product.description}</div>
           <div id="price">{product.price}</div>
           <small id="description">
-            Use Amare Promo Code 1942935 during checkout to save $10 off your first order.
+            Use Amare Promo Code 1942935 during checkout to save $10 off your
+            first order.
           </small>
           <a href={product.buyLink}>
             <button>BUY NOW</button>
