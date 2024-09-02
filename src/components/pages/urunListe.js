@@ -48,7 +48,7 @@ const urunListe = [
     imageUrl: `${process.env.PUBLIC_URL}/images/amareedgegrape.png`,
     alt: "Amare EDGE+",
     buyLink: "https://www.amare.com/1942935/en-us/amareedge-plus-grape-2pack",
-    linkName: "amare-edge-plus",
+    linkName: "amare-edge-plus-grape",
   },
   {
     id: 4,
