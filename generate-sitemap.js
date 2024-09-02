@@ -115,7 +115,7 @@ const staticRoutes = [
 ];
 
 // Base URL of your site
-const baseUrl = 'https://amarewellnessproducts.com/';
+const baseUrl = 'https://amarewellnessproducts.com';
 
 // Build XML structure
 const urlset = xmlbuilder.create('urlset', { encoding: 'UTF-8' })
@@ -134,7 +134,7 @@ urlset.ele('url')
 // Add static routes
 staticRoutes.forEach(route => {
   urlset.ele('url')
-    .ele('loc', {}, `${baseUrl}/${route.path}`)
+    .ele('loc', {}, `${baseUrl}${route.path}`)
     .up()
     .ele('lastmod', {}, new Date().toISOString().split('T')[0])
     .up()
@@ -146,7 +146,7 @@ staticRoutes.forEach(route => {
 // Add product URLs
 products.forEach(product => {
   urlset.ele('url')
-    .ele('loc', {}, `${baseUrl}/${product.linkName}`)
+    .ele('loc', {}, `${baseUrl}${product.linkName}`)
     .up()
     .ele('lastmod', {}, new Date().toISOString().split('T')[0])
     .up()
