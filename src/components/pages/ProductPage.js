@@ -15,19 +15,18 @@ function ProductPage() {
 
   return (
     <div className="productpage">
-      <head>
-        <Helmet>
-          <title>{product.name}</title>
-          <meta name="description" content={product.description} />
-          <meta
-            name="keywords"
-            content={`${product.name}, ${product.description}, health supplements, wellness products`}
-          />
-          <meta property="og:title" content={product.name} />
-          <meta property="og:description" content={product.description} />
-          <meta property="og:image" content={product.imageUrl} />
-        </Helmet>
-      </head>
+      <Helmet>
+        <title>{product.name}</title>
+        <meta name="description" content={product.description} />
+        <meta
+          name="keywords"
+          content={`${product.name}, ${product.description}, health supplements, wellness products`}
+        />
+        <meta property="og:title" content={product.name} />
+        <meta property="og:description" content={product.description} />
+        <meta property="og:image" content={product.imageUrl} />
+      </Helmet>
+
       <div className="productpage-product">
         <img src={product.imageUrl} alt={product.name} />
         <div className="productpage-side">
