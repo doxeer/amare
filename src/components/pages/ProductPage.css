@@ -63,10 +63,6 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .productpage {
-    /* margin-top: 90px; */
-  }
-
   .productpage-product {
     flex-direction: column;
     width: 90%;
@@ -102,13 +98,13 @@
     width: 100%;
     padding: 10px;
   }
-  .productpage-image-center{
+  .productpage-image-center {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
-  .productpage img{
+  .productpage img {
     width: 270px;
     height: 210px;
   }
