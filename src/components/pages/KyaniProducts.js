@@ -1,6 +1,10 @@
 import kyanisunset from "../images/Kyanisunset.png";
 import Kyaniberrylemonade from "../images/Kyaniberrylemonade.png";
 import kyanipeach from "../images/Kyanipeach.png";
+import kyaninitroxtreme from "../images/kyaninitroxtreme.png";
+import kyanisunrise from "../images/kyanisunrise.png";
+import kyanitrianglepack from "../images/kyanitrianglepack.png"
+import fit from "../images/fit20.png"
 import { Link } from "react-router-dom";
 
 const KyaniProducts = [
@@ -39,33 +43,47 @@ const KyaniProducts = [
   },
   {
     id: 4,
-    name: "Amare EDGE™ Watermelon [Jar]",
+    name: "Kyäni Nitro Xtreme",
     description:
-      "Amare EDGE, the all-natural nootropic, that helps give you the motivation to t.",
-    price: "$78.95",
-
-    imageUrl: "https://via.placeholder.com/150",
-    buyLink: "https://example.com/",
+      "Supports Nitric Oxide production in your body.",
+    price: "$64.95",
+    alt: "kyaninitroxtreme",
+    imageUrl: kyaninitroxtreme,
+    buyLink: "https://www.amare.com/1942935/en-us/kyani-nitro-xtreme-56ml",
+    linkName: "kyani-nitro-xtreme",
   },
   {
     id: 5,
-    name: "Amare EDGE™ Watermelon [Jar]",
+    name: "Kyäni Sunrise",
     description:
-      "Amare EDGE, the all-natural nootropic, that helps give you the motivation to t.",
-    price: "$78.95",
-
-    imageUrl: "https://via.placeholder.com/150",
-    buyLink: "https://example.com/",
+      "Begin your day with a mouthwatering blend of wild blueberry, pomegranate, acai berry, and a total of 22 antioxidant superfoods, 10 essential vitamins, and 60+ minerals with Kyäni Sunrise. Formulated with bioavailable ingredients for optimal nutrient absorption, Sunrise provides antioxidant support to help your body fight oxidative stress and maintain cellular health. Perfectly portioned in a delicious on-the-go pouch",
+    price: "$55.95",
+    alt: "kyanisunrise",
+    imageUrl: kyanisunrise,
+    buyLink: "https://www.amare.com/1942935/en-us/kyani-sunrise",
+    linkName: "kyani-sunrise",
   },
   {
     id: 6,
-    name: "Amare EDGE™ Watermelon [Jar]",
+    name: "Triangle of Health™ Pack",
     description:
-      "Amare EDGE, the all-natural nootropic, that helps give you the motivation to t.",
-    price: "$78.95",
-
-    imageUrl: "https://via.placeholder.com/150",
-    buyLink: "https://example.com/",
+      "The Triangle of Health™ Pack features Kyäni Sunrise, Kyäni Sunset, and Kyäni Nitro Xtreme or Kyäni Nitro FX. Together, the products work synergistically to provide you with unmatched nutrition for optimal health.",
+    price: "$137.95",
+    alt: "triangleofhealthpack",
+    imageUrl: kyanitrianglepack,
+    buyLink: "https://www.amare.com/1942935/en-us/triangle-health-pack",
+    linkName: "kyani-triangle-of-health-pack",
+  },
+  {
+    id: 7,
+    name: "FIT20®",
+    description:
+      "If you want superior quality protein for building lean muscle, optimizing metabolism, supporting bone and joint health, and supporting long-term Nitric Oxide production, then FIT20 is for you! FIT20 contains MCT for fast fuel and 20 grams of best-in-class whey protein and hydrolyzed collagen for long-lasting energy.*",
+    price: "$55.95",
+    alt:"fit20",
+    imageUrl: fit,
+    buyLink: "https://www.amare.com/1942935/en-us/kyani-fit20",
+    linkName: "kyani-fit-20",
   },
 ];
 
