@@ -1,6 +1,7 @@
 import kyanisunset from "../images/Kyanisunset.png";
 import Kyaniberrylemonade from "../images/Kyaniberrylemonade.png";
 import kyanipeach from "../images/Kyanipeach.png";
+import { Link } from "react-router-dom";
 
 const KyaniProducts = [
   {
@@ -44,7 +45,7 @@ const KyaniProducts = [
     price: "$78.95",
 
     imageUrl: "https://via.placeholder.com/150",
-    buyLink: "https://example.com/buy-edge-watermelon",
+    buyLink: "https://example.com/",
   },
   {
     id: 5,
@@ -54,7 +55,7 @@ const KyaniProducts = [
     price: "$78.95",
 
     imageUrl: "https://via.placeholder.com/150",
-    buyLink: "https://example.com/buy-edge-watermelon",
+    buyLink: "https://example.com/",
   },
   {
     id: 6,
@@ -64,8 +65,19 @@ const KyaniProducts = [
     price: "$78.95",
 
     imageUrl: "https://via.placeholder.com/150",
-    buyLink: "https://example.com/buy-edge-watermelon",
+    buyLink: "https://example.com/",
   },
 ];
+
+KyaniProducts.map((product) => (
+  <div key={product.id}>
+    <Link
+      to={`/${product.linkName}`}
+      state={product} // ProductPage'e product objesini state olarak gönderiyoruz
+    >
+      {product.name}
+    </Link>
+  </div>
+));
 
 export default KyaniProducts;
