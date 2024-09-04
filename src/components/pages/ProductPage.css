@@ -63,12 +63,16 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+  .productpage {
+    /* margin-top: 0px; */
+    height: auto;
+  }
   .productpage-product {
     flex-direction: column;
     width: 90%;
   }
 
-  .productpage-product > img {
+  .productpage-product > .productpage-image-center > img {
     width: 350px;
     height: 300px;
   }
