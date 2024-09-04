@@ -60,6 +60,12 @@
   color: purple;
   border: 1px solid purple;
 }
+.productpage-image-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -102,13 +108,8 @@
     width: 100%;
     padding: 10px;
   }
-  .productpage-image-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  .productpage img {
+
+  .productpage-product > .productpage-image-center > img {
     width: 270px;
     height: 210px;
   }
