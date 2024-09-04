@@ -73,6 +73,7 @@ function DefaultPage() {
             price={"78.95$"}
             alt="Amare EDGE Product"
             href={"https://www.amare.com/1942935/en-us/amareedgegrape"}
+            localLink="amare-edge-plus-grape"
           />
           <Product
             Url={product2}
@@ -80,6 +81,8 @@ function DefaultPage() {
             price={"73.95$"}
             alt="Amare MentaBiotics® "
             href={"https://www.amare.com/1942935/en-us/MentaBioticsSugarFree"}
+            localLink="mentaBiotics"
+
           />
           <Product
             Url={product3}
@@ -87,6 +90,7 @@ function DefaultPage() {
             price={"47.95$"}
             alt="Amare Energy+ "
             href={"https://www.amare.com/1942935/en-us/EnergyPlusSugarFree"}
+            localLink="energy-plus-dragon-fruit"
           />
           <Product
             Url={product4}
@@ -94,6 +98,7 @@ function DefaultPage() {
             price={"78.95$"}
             alt="Amare EDGE™ Watermelon [Jar]"
             href={"https://www.amare.com/1942935/en-us/amareedge"}
+            localLink="amare-edge"
           />
         </div>
       </div>

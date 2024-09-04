@@ -31,7 +31,7 @@ function Partner() {
           <meta property="og:image" content={branderPhoto} />
         </Helmet>
       </head>
-      <img src={branderPhoto} id="brander-photo" />
+      <img src={branderPhoto} alt="1" id="brander-photo" />
       <a href="https://www.amare.com/1942935/en-us/account/register">
         <button id="btn1">Enroll Today</button>
       </a>
@@ -64,7 +64,7 @@ function Partner() {
           </a>
         </div>
         <div className="step">
-          <img src={step2} />
+          <img src={step2} alt="2" />
           <div className="partner-step">
             <h2>Step 2:</h2>
             <h1>Share Award Winning Products</h1>
@@ -83,10 +83,10 @@ function Partner() {
               scientific research proven to deliver results.
             </p>
           </div>
-          <img src={step3} />
+          <img src={step3} alt="3" />
         </div>
         <div className="step">
-          <img src={step4} />
+          <img src={step4} alt="4" />
           <div className="partner-step">
             <h2>Step 4:</h2>
             <h1>Share Award Winning Products</h1>
@@ -143,7 +143,7 @@ function Partner() {
         </div>
       </div>
       <footer>
-        <img src={amare} />
+        <img src={amare} alt="5" />
         <p id="p">
           This is an Amare Global Independent Distributor website. This site is
           not owned or operated by Amare Global. Any information, views, or
