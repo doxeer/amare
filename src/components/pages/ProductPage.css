@@ -64,7 +64,7 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .productpage {
-    margin-top: 90px;
+    /* margin-top: 90px; */
   }
 
   .productpage-product {
@@ -94,7 +94,7 @@
 
 @media (max-width: 480px) {
   .productpage {
-    margin-top: 100px; /* Navbar'ın üstüne çıkmayı önlemek için ekstra boşluk */
+    /* margin-top: 100px; */
     height: auto;
   }
 
@@ -102,9 +102,15 @@
     width: 100%;
     padding: 10px;
   }
+  .productpage-image-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
   .productpage img{
-    width: 320px;
-    height: 300px;
+    width: 270px;
+    height: 210px;
   }
   .productpage-side button {
     width: 100px;

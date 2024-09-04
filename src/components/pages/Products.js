@@ -22,15 +22,18 @@ function ProductCard({ product }) {
             .map((p) => `${p.name}, ${p.description}`)
             .join(", ")}, health products, wellness, Amare supplements`}
         />
-        <meta property="og:title" content={`${urunListe
-            .map((p) => `${p.name}`)
-            .join(", ")}`} />
-        <meta property="og:description" content={`${urunListe
-            .map((p) => `${p.description}`)
-            .join(", ")}`} />
-        <meta property="og:image" content={`${urunListe
-            .map((p) => `${p.imageUrl}`)
-            .join(", ")}`} />
+        <meta
+          property="og:title"
+          content={`${urunListe.map((p) => `${p.name}`).join(", ")}`}
+        />
+        <meta
+          property="og:description"
+          content={`${urunListe.map((p) => `${p.description}`).join(", ")}`}
+        />
+        <meta
+          property="og:image"
+          content={`${urunListe.map((p) => `${p.imageUrl}`).join(", ")}`}
+        />
       </Helmet>
 
       <div className="product-card">

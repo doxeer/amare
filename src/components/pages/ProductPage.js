@@ -2,11 +2,12 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import urunListe from "./urunListe";
 import "./ProductPage.css";
+import KyaniProducts from "./KyaniProducts";
 
 function ProductPage() {
   const { linkName } = useParams();
   const navigate = useNavigate();
-  const product = urunListe.find((item) => item.linkName === linkName);
+  const product = urunListe.find((item) => item.linkName === linkName)||KyaniProducts.find((item)=>item.linkName === linkName);
 
   if (!product) {
     navigate("/", { replace: true });
@@ -28,7 +29,7 @@ function ProductPage() {
       </Helmet>
 
       <div className="productpage-product">
-        <img src={product.imageUrl} alt={product.name} />
+        <div className="productpage-image-center"><img src={product.imageUrl} alt={product.name} /></div>
         <div className="productpage-side">
           <h2>{product.name}</h2>
           <div id="description">{product.description}</div>

@@ -17,6 +17,12 @@
     height: auto;
     margin-bottom: 15px;
   }
+  .product-card >p {
+    margin-bottom: 10px;/* Paragraflar için boşluk bırakır */
+    margin-top: auto;
+    max-height: 155px;
+    overflow: hidden;
+  }
   
   .price {
     margin: 10px 0;
