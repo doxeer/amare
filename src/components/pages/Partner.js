@@ -31,7 +31,7 @@ function Partner() {
           <meta property="og:image" content={branderPhoto} />
         </Helmet>
       </head>
-      <img src={branderPhoto} alt="1" id="brander-photo" />
+      <img src={branderPhoto} alt="brander-photo" id="brander-photo" />
       <a href="https://www.amare.com/1942935/en-us/account/register">
         <button id="btn1">Enroll Today</button>
       </a>
