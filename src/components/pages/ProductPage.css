@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75vh;
+  flex-direction: column; /* Stack product section and related products vertically */
+  height: auto; /* Adjust height to auto for flexibility */
   width: 100%;
 }
 
@@ -60,6 +61,7 @@
   color: purple;
   border: 1px solid purple;
 }
+
 .productpage-image-center {
   display: flex;
   align-items: center;
@@ -67,12 +69,63 @@
   width: 100%;
 }
 
-/* Media Queries for Responsiveness */
+/* Related Products Section */
+.related-products-carousel {
+  margin-top: 2rem;
+  width: 80%;
+}
+
+.related-products-carousel h3 {
+  text-align: center;
+  color: purple;
+  margin-bottom: 1.5rem;
+}
+
+.related-products-carousel .slick-slide {
+  padding: 0 10px;
+}
+
+.related-products-carousel .related-product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.related-products-carousel .related-product-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.related-products-carousel .related-product-card h4 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.related-products-carousel .related-product-card button {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.related-products-carousel .related-product-card button:hover {
+  background-color: darkviolet;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  .productpage {
-    /* margin-top: 0px; */
-    height: auto;
-  }
   .productpage-product {
     flex-direction: column;
     width: 90%;
@@ -89,21 +142,12 @@
     width: 100%;
   }
 
-  #description {
-    max-width: 100%;
-  }
-
-  .productpage-side button {
-    width: 90px;
+  .related-products-carousel {
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .productpage {
-    /* margin-top: 100px; */
-    height: auto;
-  }
-
   .productpage-product {
     width: 100%;
     padding: 10px;
@@ -113,8 +157,8 @@
     width: 270px;
     height: 210px;
   }
-  .productpage-side button {
-    width: 100px;
-    height: 35px;
+
+  .related-products-carousel .related-product-card {
+    padding: 0.5rem;
   }
 }

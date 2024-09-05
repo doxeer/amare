@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import urunListe from "./urunListe";
 import "./ProductPage.css";
 import KyaniProducts from "./KyaniProducts";
+import RelatedProducts from "./RelatedProducts"; 
 
 function ProductPage() {
   const { linkName } = useParams();
@@ -13,6 +14,10 @@ function ProductPage() {
     navigate("/", { replace: true });
     return null;
   }
+  const relatedProducts = urunListe
+    .filter((item) => item.category === product.category && item.id !== product.id)
+    .concat(KyaniProducts.filter((item) => item.category === product.category && item.id !== product.id));
+
 
   return (
     <div className="productpage">
@@ -43,6 +48,7 @@ function ProductPage() {
           </a>
         </div>
       </div>
+      <RelatedProducts products={relatedProducts} />
     </div>
   );
 }
