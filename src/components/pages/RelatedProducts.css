@@ -1,128 +1,82 @@
-/* RelatedProducts.css */
-
-/* Related Products Section */
 .related-products-carousel {
-    margin-top: 2rem;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%; /* Mobil uyum için genişlik %100 */
+  margin-top: 2rem;
+  margin-bottom: 30px;
+}
+
+.related-products-carousel .slick-slide {
+  padding: 0 10px;
+}
+
+.related-product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 150px;
+  height: 280px;
+  border: 1px solid purple;
+  border-radius: 20px;
+}
+
+.related-products-carousel h3 {
+  text-align: center;
+  color: purple;
+  margin-bottom: 1.5rem;
+}
+
+.related-products-carousel h4 {
+  text-align: center;
+  height: 50px;
+}
+
+.related-product-card img {
+  width: 60%;
+  height: 100px;
+  object-fit: contain;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+.related-products-carousel .related-product-card button {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 90px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.related-products-carousel .related-product-card button:hover {
+  background-color: white;
+  color: purple;
+  border: 1px solid purple;
+}
+
+/* Tablet ekranlar için */
+@media (max-width: 1024px) {
+  .related-product-card {
+    width: 130px; /* Daha küçük kart boyutu */
+    height: 250px;
   }
-  
-  .related-products-carousel h3 {
-    text-align: center;
-    color: purple;
-    margin-bottom: 1.5rem;
+  .related-product-card img {
+    height: 90px;
   }
-  
-  .related-products-carousel .slick-slide {
-    padding: 0 10px; /* Adjust padding to control spacing between slides */
+}
+
+/* Mobil ekranlar için */
+@media (max-width: 768px) {
+  .related-product-card {
+    width: 100px;
+    height: 260px;
   }
-  
-  .related-products-carousel .related-product-card {
-    display: flex;
-    flex-direction: column; /* Ensures vertical stacking of image and text */
-    justify-content: center;
-    align-items: center; /* Centers the content horizontally */
-    width: 100%; /* Make the card take up full width */
-    max-width: 300px; /* Set a max-width to standardize card size */
-    height: 350px; /* Adjusted height to shorten the card */
-    background-color: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center the text and content inside */
-    transition: transform 0.3s ease;
-    margin: 0 auto; /* Center the card in the carousel */
+  .related-product-card img {
+    height: 80px;
+    width: 100px;
   }
-  
-  .related-products-carousel .related-product-card img {
-    max-width: 60%; /* Adjust the image size to fit within the card */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the image is fully visible */
-    border-radius: 5px;
-    margin: 0 auto; /* Center the image horizontally */
-    display: block; /* Ensures the image is treated as a block-level element */
-  }
-  
-  .related-products-carousel .related-product-card h3 {
-    margin: 10px 0;
-    font-size: 1rem;
-    background-color: darkviolet;
-  }
-  
-  .related-products-carousel .related-product-card button {
-    background-color: purple;
-    color: white;
-    border-radius: 20px;
-    width: 90px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 5px; /* Add margin to separate from other content */
-  }
-  
-  .related-products-carousel .related-product-card button:hover {
-    background-color: white;
-    color: purple;
-    border: 1px solid purple;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1024px) {
-    .related-products-carousel {
-      width: 90%;
-    }
-  
-    .related-products-carousel .slick-slide {
-      padding: 0 8px; /* Reduce padding for medium screens */
-    }
-  
-    .related-products-carousel .related-product-card {
-      max-width: 80%; /* Allow cards to take up more width on medium screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .related-products-carousel {
-      width: 100%;
-    }
-  
-    .related-products-carousel .slick-slide {
-      padding: 0 5px; /* Reduce padding for smaller screens */
-    }
-  
-    .related-products-carousel .related-product-card {
-      max-width: 90%; /* Allow cards to take up more width on smaller screens */
-      height: auto; /* Allow height to adjust based on content */
-    }
-  
-    .related-products-carousel .related-product-card img {
-      max-width: 70%; /* Adjust image size to fit better on smaller screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .related-products-carousel .slick-slide {
-      padding: 0 2px; /* Further reduce padding for very small screens */
-    }
-  
-    .related-products-carousel .related-product-card {
-      padding: 0.5rem;
-      max-width: 100%; /* Allow cards to take full width on very small screens */
-      height: auto; /* Allow height to adjust based on content */
-    }
-  
-    .related-products-carousel .related-product-card img {
-      max-width: 80%; /* Adjust image size to fit better on very small screens */
-    }
-  
-    .related-products-carousel .related-product-card h3 {
-      font-size: 0.9rem; /* Reduce font size for better fit on very small screens */
-    }
-  
-    .related-products-carousel .related-product-card button {
-      width: 80px; /* Reduce button width for very small screens */
-      height: 28px; /* Reduce button height for very small screens */
-      font-size: 0.8rem; /* Reduce button font size for better fit */
-    }
-  }
-  
+}

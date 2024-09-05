@@ -3,21 +3,28 @@ import { Helmet } from "react-helmet-async";
 import urunListe from "./urunListe";
 import "./ProductPage.css";
 import KyaniProducts from "./KyaniProducts";
-import RelatedProducts from "./RelatedProducts"; 
+import RelatedProducts from "./RelatedProducts";
 
 function ProductPage() {
   const { linkName } = useParams();
   const navigate = useNavigate();
-  const product = urunListe.find((item) => item.linkName === linkName)||KyaniProducts.find((item)=>item.linkName === linkName);
+  const product =
+    urunListe.find((item) => item.linkName === linkName) ||
+    KyaniProducts.find((item) => item.linkName === linkName);
 
   if (!product) {
     navigate("/", { replace: true });
     return null;
   }
   const relatedProducts = urunListe
-    .filter((item) => item.category === product.category && item.id !== product.id)
-    .concat(KyaniProducts.filter((item) => item.category === product.category && item.id !== product.id));
-
+    .filter(
+      (item) => item.category === product.category && item.id !== product.id
+    )
+    .concat(
+      KyaniProducts.filter(
+        (item) => item.category === product.category && item.id !== product.id
+      )
+    );
 
   return (
     <div className="productpage">
@@ -34,7 +41,9 @@ function ProductPage() {
       </Helmet>
 
       <div className="productpage-product">
-        <div className="productpage-image-center"><img src={product.imageUrl} alt={product.name} /></div>
+        <div className="productpage-image-center">
+          <img src={product.imageUrl} alt={product.name} />
+        </div>
         <div className="productpage-side">
           <h2>{product.name}</h2>
           <div id="description">{product.description}</div>
@@ -48,7 +57,9 @@ function ProductPage() {
           </a>
         </div>
       </div>
-      <RelatedProducts products={relatedProducts} />
+      <div className="related-products">
+        <RelatedProducts products={relatedProducts} />
+      </div>
     </div>
   );
 }

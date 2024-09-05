@@ -127,7 +127,7 @@ const urunListe = [
   },
   {
     id: 11,
-    name: "Energy+DragonFruit",
+    name: "Energy+ Dragon Fruit",
     description: "Plant-Based Daily Drink for Mental and Physical Energy",
     price: "$47.95",
     imageUrl: EnergyPlusdragon,
