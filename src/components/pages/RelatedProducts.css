@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 80%; /* Mobil uyum için genişlik %100 */
+  width: 71.5%;
   margin-top: 2rem;
   margin-bottom: 30px;
 }
@@ -61,11 +61,14 @@
 /* Tablet ekranlar için */
 @media (max-width: 1024px) {
   .related-product-card {
-    width: 130px; /* Daha küçük kart boyutu */
+    width: 130px;
     height: 250px;
   }
   .related-product-card img {
     height: 90px;
+  }
+  .related-products-carousel {
+    width: 96%;
   }
 }
 
