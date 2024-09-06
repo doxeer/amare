@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import urunListe from "./urunListe";
+import SearchBar from "./SearchBar"; // SearchBar bileşenini içe aktar
 import "./Products.css";
 
 function ProductCard({ product }) {
@@ -59,12 +60,29 @@ function ProductCard({ product }) {
   );
 }
 
-const ProductList = () => (
-  <div className="product-list">
-    {urunListe.map((product) => (
-      <ProductCard key={product.linkName} product={product} />
-    ))}
-  </div>
-);
+const ProductList = () => {
+  const [filteredProducts, setFilteredProducts] = useState(urunListe);
+
+  const handleSearch = (query) => {
+    const filtered = urunListe.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredProducts(filtered);
+  };
+
+  return (
+    <div>
+      {/* SearchBar kullanımı */}
+      <SearchBar onSearch={handleSearch} />
+
+      {/* Ürün Listesi */}
+      <div className="product-list">
+        {filteredProducts.map((product) => (
+          <ProductCard key={product.linkName} product={product} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default ProductList;

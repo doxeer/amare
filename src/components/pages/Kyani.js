@@ -1,40 +1,28 @@
-import React from "react";
-import "./Kyani.css";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import KyaniProducts from "./KyaniProducts";
+import SearchBar from "./SearchBar";
+import "./Kyani.css";
 import { useNavigate } from "react-router-dom";
 
-function ProductCard({ product }) {
-
+const ProductList = () => {
+  const [filteredProducts, setFilteredProducts] = useState(KyaniProducts);
   const navigate = useNavigate();
-  const handleNavigate = () => {
-    navigate(`/${product.linkName}`);
+
+  const handleSearch = (query) => {
+    const lowercasedQuery = query.toLowerCase();
+    const filtered = KyaniProducts.filter(product =>
+      product.name.toLowerCase().includes(lowercasedQuery)
+    );
+    setFilteredProducts(filtered);
+  };
+
+  const handleNavigate = (linkName) => {
+    navigate(`/${linkName}`);
   };
 
   return (
-    <div className="product-card">
-      <div onClick={handleNavigate} style={{ cursor: "pointer" }}>
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="product-image"
-          />
-        </div>
-      <h3>{product.name}</h3>
-      <p>{product.description}</p>
-      <p className="price">
-        <span className="new-price">{product.price}</span>
-      </p>
-      <a href={product.buyLink} className="buy-button">
-        BUY NOW
-      </a>
-    </div>
-  );
-}
-
-const ProductList = () => (
-  <div>
-    <head>
+    <div>
       <Helmet>
         <title>Amare - Kyani Products</title>
         <meta
@@ -55,13 +43,34 @@ const ProductList = () => (
         />
         <meta property="og:image" content="https://via.placeholder.com/150" />
       </Helmet>
-    </head>
-    <div className="product-list">
-      {KyaniProducts.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      <SearchBar onSearch={handleSearch} />
+      <div className="product-list">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <div key={product.id} className="product-card">
+              <div onClick={() => handleNavigate(product.linkName)} style={{ cursor: "pointer" }}>
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="product-image"
+                />
+              </div>
+              <h3>{product.name}</h3>
+              <p>{product.description}</p>
+              <p className="price">
+                <span className="new-price">{product.price}</span>
+              </p>
+              <a href={product.buyLink} className="buy-button">
+                BUY NOW
+              </a>
+            </div>
+          ))
+        ) : (
+          <p>No products found</p>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ProductList;
