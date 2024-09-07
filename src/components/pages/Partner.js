@@ -5,6 +5,7 @@ import step3 from "../images/step3.avif";
 import step4 from "../images/step4.avif";
 import amare from "../images/amare.png";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 function Partner() {
   return (
@@ -140,6 +141,17 @@ function Partner() {
           <a href="https://www.amare.com/1942935/en-us/account/register">
             <button>Become a partner</button>
           </a>
+        </div>
+        <div className="signup-section">
+          <h2>Join Us Today!</h2>
+          <p>
+            Become a part of Amare and discover the benefits of our amazing
+            products. Sign up now and start your journey to better health and
+            wellness!
+          </p>
+          <Link to="/sign-up-or-log-in-to-amare">
+            <button>Sign Up</button>
+          </Link>
         </div>
       </div>
       <footer>

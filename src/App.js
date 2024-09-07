@@ -9,6 +9,8 @@ import DefaultPage from "./components/pages/DefaultPage";
 import Products from "./components/pages/Products";
 import Kyani from "./components/pages/Kyani";
 import ProductPage from "./components/pages/ProductPage";
+import SignupLinks from './components/pages/Country/SignupLinks';
+import CountrySignup from "./components/pages/Country/CountrySignup";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
               <Route path="products" element={<Products />} />
               <Route path="kyani-products" element={<Kyani />} />
               <Route path="/:linkName" element={<ProductPage />} />
+              <Route path="/sign-up-or-log-in-to-amare" element={<SignupLinks />} />
+              <Route path="create-an-amare-brand-partner-account-from/:country" element={<CountrySignup />} />
             </Route>
           </Routes>
         </div>
