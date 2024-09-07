@@ -86,4 +86,9 @@ const content = {
     }
 };
 
+<<<<<<< Updated upstream
 export default content;
+=======
+}
+module.exports = content;
+>>>>>>> Stashed changes

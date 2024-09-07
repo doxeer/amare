@@ -1,6 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 const xmlbuilder = require("xmlbuilder");
+<<<<<<< Updated upstream
+=======
+const content = require("./src/components/pages/Country/content");
+>>>>>>> Stashed changes
 
 const products = [
   {
