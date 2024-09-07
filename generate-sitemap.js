@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const xmlbuilder = require("xmlbuilder");
+const content = require("./src/components/pages/Country/content.js");
 
 const products = [
   {
@@ -150,6 +151,31 @@ const staticRoutes = [
 // Base URL of your site
 const baseUrl = "https://amarewellnessproducts.com";
 
+// Hreflang linklerini oluşturma fonksiyonu
+const generateHreflangLinks = () => {
+  const langMap = {
+    united_states: 'en',
+    netherlands: 'nl',
+    austria: 'de',
+    czech_republic: 'cs',
+    france: 'fr',
+    germany: 'de',
+    liechtenstein: 'de',
+    luxembourg: 'de',
+    mexico: 'es',
+    new_zealand: 'en',
+    switzerland: 'de',
+    spain: 'es',
+    turkey: 'tr',
+    united_kingdom: 'en'
+  };
+
+  return Object.keys(content).map(key => ({
+    lang: langMap[key] || 'en',
+    url: `${baseUrl}/${content[key].slug}`
+  }));
+};
+
 // Build XML structure
 const urlset = xmlbuilder
   .create("urlset", { encoding: "UTF-8" })
@@ -184,6 +210,19 @@ products.forEach((product) => {
   urlset
     .ele("url")
     .ele("loc", {}, `${baseUrl}/${product.linkName}`)
+    .up()
+    .ele("lastmod", {}, new Date().toISOString().split("T")[0])
+    .up()
+    .ele("changefreq", {}, "monthly")
+    .up()
+    .ele("priority", {}, "0.6");
+});
+// Ülkeye özgü URL'leri ekleyin
+const hreflangLinks = generateHreflangLinks();
+hreflangLinks.forEach(link => {
+  urlset
+    .ele("url")
+    .ele("loc", {}, link.url)
     .up()
     .ele("lastmod", {}, new Date().toISOString().split("T")[0])
     .up()
