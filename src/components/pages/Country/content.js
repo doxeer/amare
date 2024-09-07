@@ -101,6 +101,11 @@ const content = {
         readyText: "Ready to get started? <a href='https://amarewellnessproducts.com/create-an-amare-brand-partner-account-from-united-kingdom'>Click here to register now.</a>",
         slug: "create-an-amare-brand-partner-account-from-the-united-kingdom",
     }
+};
 
-}
+<<<<<<< Updated upstream
 export default content;
+=======
+}
+module.exports = content;
+>>>>>>> Stashed changes
