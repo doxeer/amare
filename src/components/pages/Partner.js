@@ -142,7 +142,7 @@ function Partner() {
           }}
         >
           <a href="https://www.amare.com/1942935/en-us/account/register">
-            <button>Become a partner</button>
+            <button style={{marginTop: '10px'}}>Become a partner</button>
           </a>
         </div>
         <div className="signup-section">
