@@ -78,10 +78,11 @@ function Partner() {
         <div className="step">
           <div className="partner-step">
             <h2>Step 3:</h2>
-            <h1>Share Award Winning Products</h1>
+            <h1>Build & Experience a Community of Leaders</h1>
             <p>
-              Share award winning best in class products each one backed by
-              scientific research proven to deliver results.
+              As you build your team, you'll be able to network with proven
+              leaders and learn how they've built businesses from the ground up.
+              Tap in and grow your business exponentially.
             </p>
           </div>
           <img src={step3} alt="3" />
@@ -90,10 +91,12 @@ function Partner() {
           <img src={step4} alt="4" />
           <div className="partner-step">
             <h2>Step 4:</h2>
-            <h1>Share Award Winning Products</h1>
+            <h1>Make a Difference</h1>
             <p>
-              Share award winning best in class products each one backed by
-              scientific research proven to deliver results.
+              As you grow your business, you are making a real difference
+              mentally, physically and financially.* In addition, Amare gives
+              back to organizations like The Children's Center as we make a
+              difference in the community around us.
             </p>
             <a href="https://www.amare.com/1942935/en-us/account/register">
               <button>Make a difference</button>
