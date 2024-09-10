@@ -42,7 +42,7 @@ function ProductPage() {
 
       <div className="productpage-product">
         <div className="productpage-image-center">
-          <img src={product.imageUrl} alt={product.name} />
+          <img src={product.imageUrl} alt={product.name} id="productpage-image"/>
         </div>
         <div className="productpage-side">
           <h2>{product.name}</h2>

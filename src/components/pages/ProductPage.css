@@ -68,6 +68,10 @@
   justify-content: center;
   width: 100%;
 }
+#productpage-image{
+  height: 300px;
+  width: auto;
+}
 
 .related-products{
   display: flex;
@@ -84,9 +88,9 @@
     width: 90%;
   }
 
-  .productpage-product > .productpage-image-center > img {
-    width: 350px;
-    height: 300px;
+  #productpage-image{
+    height: 250px;
+    width: 300px;
   }
 
   .productpage-side {
@@ -102,8 +106,8 @@
     padding: 10px;
   }
 
-  .productpage-product > .productpage-image-center > img {
-    width: 270px;
+  .productpage-image-center> #productpage-image{
     height: 210px;
+    width: 270px;
   }
 }

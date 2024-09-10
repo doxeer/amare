@@ -38,7 +38,7 @@ function ProductCard({ product }) {
       </Helmet>
 
       <div className="product-card">
-        <div onClick={handleNavigate} style={{ cursor: "pointer" }}>
+        <div onClick={handleNavigate} style={{ cursor: "pointer" }} id="image">
           <img
             src={product.imageUrl}
             alt={product.name}
