@@ -13,7 +13,7 @@ function ProductCard({ product }) {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>Amare - Products</title>
         <meta name="description" content={product.description} />
@@ -56,7 +56,7 @@ function ProductCard({ product }) {
           BUY NOW
         </a>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 
@@ -71,17 +71,16 @@ const ProductList = () => {
   };
 
   return (
-    <div>
-      {/* SearchBar kullanımı */}
-      <SearchBar onSearch={handleSearch} />
-
-      {/* Ürün Listesi */}
-      <div className="product-list">
+    <section>
+      <header>
+        <SearchBar onSearch={handleSearch} />
+      </header>
+      <article className="product-list">
         {filteredProducts.map((product) => (
           <ProductCard key={product.linkName} product={product} />
         ))}
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 

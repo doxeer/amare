@@ -70,7 +70,8 @@
 
 .step img {
   width: 50%;
-  height: 400px;
+  height: 500px;
+  object-fit: cover;
 }
 
 .partner-bottom {

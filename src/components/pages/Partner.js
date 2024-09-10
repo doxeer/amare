@@ -8,30 +8,32 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 function Partner() {
+  const handleClick = () => {
+    window.open("https://www.amare.com/1942935/en-us/account/register", '_self');
+  };
   return (
-    <div className="partner">
-      
-        <Helmet>
-          <title>Amare - Partnership</title>
-          <meta
-            name="description"
-            content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
-          />
-          <meta
-            name="keywords"
-            content="Amare Partner, wellness, financial wellness, purpose-driven entrepreneurs, Amare Global"
-          />
-          <meta
-            property="og:title"
-            content="Join as an Amare Partner - Amare Global"
-          />
-          <meta
-            property="og:description"
-            content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
-          />
-          <meta property="og:image" content={branderPhoto} />
-        </Helmet>
-      
+    <main className="partner">
+      <Helmet>
+        <title>Amare - Partnership</title>
+        <meta
+          name="description"
+          content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
+        />
+        <meta
+          name="keywords"
+          content="Amare Partner, wellness, financial wellness, purpose-driven entrepreneurs, Amare Global"
+        />
+        <meta
+          property="og:title"
+          content="Join as an Amare Partner - Amare Global"
+        />
+        <meta
+          property="og:description"
+          content="Become an Amare Partner and help others achieve overall wellness while supporting your financial wellness. Join a community of purpose-driven entrepreneurs."
+        />
+        <meta property="og:image" content={branderPhoto} />
+      </Helmet>
+
       <img src={branderPhoto} alt="brander-photo" id="brander-photo" />
       <a href="https://www.amare.com/1942935/en-us/account/register">
         <button id="btn1">Enroll Today</button>
@@ -44,7 +46,7 @@ function Partner() {
         exclusive rewards along the way by introducing others to Amare
         Products.*
       </p>
-      <div className="steps">
+      <section className="steps">
         <h2>Step 1</h2>
         <h1>Enroll</h1>
         <p>
@@ -64,7 +66,7 @@ function Partner() {
             <button>Become a partner</button>
           </a>
         </div>
-        <div className="step">
+        <article className="step">
           <img src={step2} alt="2" />
           <div className="partner-step">
             <h2>Step 2:</h2>
@@ -74,8 +76,8 @@ function Partner() {
               scientific research proven to deliver results.
             </p>
           </div>
-        </div>
-        <div className="step">
+        </article>
+        <article className="step">
           <div className="partner-step">
             <h2>Step 3:</h2>
             <h1>Build & Experience a Community of Leaders</h1>
@@ -86,8 +88,8 @@ function Partner() {
             </p>
           </div>
           <img src={step3} alt="3" />
-        </div>
-        <div className="step">
+        </article>
+        <article className="step">
           <img src={step4} alt="4" />
           <div className="partner-step">
             <h2>Step 4:</h2>
@@ -98,13 +100,13 @@ function Partner() {
               back to organizations like The Children's Center as we make a
               difference in the community around us.
             </p>
-            <a href="https://www.amare.com/1942935/en-us/account/register">
-              <button>Make a difference</button>
-            </a>
+            <div id="step4-button">
+              <button onClick={handleClick}>Make a difference</button>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="partner-bottom">
+        </article>
+      </section>
+      <article className="partner-bottom">
         <h2>Why Amare?</h2>
         <p>
           <strong>Business Builder App:</strong> Amare provides you with access
@@ -142,10 +144,10 @@ function Partner() {
           }}
         >
           <a href="https://www.amare.com/1942935/en-us/account/register">
-            <button style={{marginTop: '10px'}}>Become a partner</button>
+            <button style={{ marginTop: "10px" }}>Become a partner</button>
           </a>
         </div>
-        <div className="signup-section">
+        <section className="signup-section">
           <h2>Join Us Today!</h2>
           <p>
             Become a part of Amare and discover the benefits of our amazing
@@ -155,8 +157,8 @@ function Partner() {
           <Link to="/sign-up-or-log-in-to-amare">
             <button>Sign Up</button>
           </Link>
-        </div>
-      </div>
+        </section>
+      </article>
       <footer>
         <img src={amare} alt="5" />
         <p id="p">
@@ -175,7 +177,7 @@ function Partner() {
           </p>
         </div>
       </footer>
-    </div>
+    </main>
   );
 }
 export default Partner;

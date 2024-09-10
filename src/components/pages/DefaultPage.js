@@ -65,7 +65,7 @@ function DefaultPage() {
 
       <section className="product-section">
         <h1>New Products</h1>
-        <div className="products">
+        <article className="products">
           <Product
             Url={product1}
             text="Amare EDGE"
@@ -98,12 +98,12 @@ function DefaultPage() {
             href={"https://www.amare.com/1942935/en-us/amareedge"}
             localLink="amare-edge"
           />
-        </div>
+        </article>
       </section>
 
       <section className="wide-ads" aria-labelledby="ad1-heading">
         <img src={ad1} alt="MentaBiotics Ad" />
-        <div className="wide-ads-side">
+        <article className="wide-ads-side">
           <h2 id="ad1-heading">Enjoy MentaBiotics® Raspberry Hibiscus</h2>
           <p>
             Live life in full bloom with this berry-botanical twist on our
@@ -114,11 +114,11 @@ function DefaultPage() {
           <a href="https://www.amare.com/1942935/en-us/MentaBioticsRaspberryHibiscus">
             <button>Shop Now</button>
           </a>
-        </div>
+        </article>
       </section>
 
       <section className="wide-ads" aria-labelledby="ad2-heading">
-        <div className="wide-ads-side">
+        <article className="wide-ads-side">
           <h2 id="ad2-heading">Kids Calm</h2>
           <p>
             Kids Calm is the perfect solution for parents struggling to get
@@ -130,7 +130,7 @@ function DefaultPage() {
           <a href="https://www.amare.com/1942935/en-us/kids-calm">
             <button>Shop Now</button>
           </a>
-        </div>
+        </article>
         <img src={ad2} alt="Kids Calm Ad" />
       </section>
       <footer>
