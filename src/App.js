@@ -11,6 +11,9 @@ import Kyani from "./components/pages/Kyani";
 import ProductPage from "./components/pages/ProductPage";
 import SignupLinks from './components/pages/Country/SignupLinks'
 import CountrySignup from './components/pages/Country/CountrySignup'
+import BlogList from './components/pages/Blog/BlogList';
+import BlogDetail from './components/pages/Blog/BlogDetail';
+
 
 function App() {
   return (
@@ -27,6 +30,10 @@ function App() {
               <Route path="/:linkName" element={<ProductPage />} />
               <Route path="sign-up-or-log-in-to-amare" element={<SignupLinks />} />
               <Route path="information/:slug" element={<CountrySignup />} />
+              {/* Blog Routes */}
+              <Route path="blog" element={<BlogList />} />  {/* Blog listesi */}
+              <Route path="blog/:id" element={<BlogDetail />} />  {/* Blog detayı */}
+
             </Route>
           </Routes>
         </div>
