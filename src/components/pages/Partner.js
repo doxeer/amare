@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function Partner() {
   return (
     <div className="partner">
-      <head>
+      
         <Helmet>
           <title>Amare - Partnership</title>
           <meta
@@ -31,7 +31,7 @@ function Partner() {
           />
           <meta property="og:image" content={branderPhoto} />
         </Helmet>
-      </head>
+      
       <img src={branderPhoto} alt="brander-photo" id="brander-photo" />
       <a href="https://www.amare.com/1942935/en-us/account/register">
         <button id="btn1">Enroll Today</button>
@@ -178,5 +178,4 @@ function Partner() {
     </div>
   );
 }
-
 export default Partner;

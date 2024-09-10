@@ -11,7 +11,7 @@ const ProductList = () => {
 
   const handleSearch = (query) => {
     const lowercasedQuery = query.toLowerCase();
-    const filtered = KyaniProducts.filter(product =>
+    const filtered = KyaniProducts.filter((product) =>
       product.name.toLowerCase().includes(lowercasedQuery)
     );
     setFilteredProducts(filtered);
@@ -43,32 +43,40 @@ const ProductList = () => {
         />
         <meta property="og:image" content="https://via.placeholder.com/150" />
       </Helmet>
-      <SearchBar onSearch={handleSearch} />
-      <div className="product-list">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
-            <div key={product.id} className="product-card">
-              <div onClick={() => handleNavigate(product.linkName)} style={{ cursor: "pointer" }}>
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="product-image"
-                />
-              </div>
-              <h3>{product.name}</h3>
-              <p>{product.description}</p>
-              <p className="price">
-                <span className="new-price">{product.price}</span>
-              </p>
-              <a href={product.buyLink} className="buy-button">
-                BUY NOW
-              </a>
-            </div>
-          ))
-        ) : (
-          <p>No products found</p>
-        )}
-      </div>
+      <header>
+        <SearchBar onSearch={handleSearch} />
+      </header>
+      <main>
+        <section className="product-list" aria-label="Product List">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <article key={product.id} className="product-card">
+                <header
+                  onClick={() => handleNavigate(product.linkName)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    className="product-image"
+                  />
+                </header>
+                
+                <h3>{product.name}</h3>
+                <p>{product.description}</p>
+                <p className="price">
+                  <span className="new-price">{product.price}</span>
+                </p>
+                <a href={product.buyLink} className="buy-button">
+                  BUY NOW
+                </a>
+              </article>
+            ))
+          ) : (
+            <p>No products found</p>
+          )}
+        </section>
+      </main>
     </div>
   );
 };

@@ -26,34 +26,33 @@ function DefaultPage() {
   const images = [amarebanner1, amarebanner2];
 
   return (
-    <div className="defaultPage" id="start">
-      <head>
-        <Helmet>
-          <title>Amare</title>
-          <meta
-            name="description"
-            content="Explore our range of Amare products including new arrivals and special offers."
-          />
-          <meta property="og:title" content="Amare Products - Home" />
-          <meta
-            property="og:description"
-            content="Explore our range of Amare products including new arrivals and special offers."
-          />
-          <meta
-            name="keywords"
-            content="Amare, health products, supplements, new arrivals, special offers"
-          />
-          <meta property="og:image" content={amarebanner1} />
-          <meta property="og:url" content={window.location.href} />
-        </Helmet>
-      </head>
-      <div className="carousel">
+    <main className="defaultPage" id="start">
+      <Helmet>
+        <title>Amare</title>
+        <meta
+          name="description"
+          content="Explore our range of Amare products including new arrivals and special offers."
+        />
+        <meta property="og:title" content="Amare Products - Home" />
+        <meta
+          property="og:description"
+          content="Explore our range of Amare products including new arrivals and special offers."
+        />
+        <meta
+          name="keywords"
+          content="Amare, health products, supplements, new arrivals, special offers"
+        />
+        <meta property="og:image" content={amarebanner1} />
+        <meta property="og:url" content={window.location.href} />
+      </Helmet>
+
+      <section className="carousel" aria-label="Amare Product Slider">
         <Slider {...settings}>
           {images.map((img, index) => (
             <div className="carousel-slide" key={index}>
               <img
                 src={img}
-                alt={`Slide ${index}`}
+                alt={`Slide ${index + 1}`}
                 className="carousel-image"
               />
               <a href="https://www.amare.com/1942935/en-us/shop-all">
@@ -62,10 +61,10 @@ function DefaultPage() {
             </div>
           ))}
         </Slider>
-      </div>
+      </section>
 
-      <div className="product-section">
-        <h1>NEW PRODUCTS</h1>
+      <section className="product-section">
+        <h1>New Products</h1>
         <div className="products">
           <Product
             Url={product1}
@@ -79,16 +78,15 @@ function DefaultPage() {
             Url={product2}
             text="MentaBiotics®"
             price={"73.95$"}
-            alt="Amare MentaBiotics® "
+            alt="Amare MentaBiotics®"
             href={"https://www.amare.com/1942935/en-us/MentaBioticsSugarFree"}
             localLink="mentaBiotics"
-
           />
           <Product
             Url={product3}
             text="Energy+™"
             price={"47.95$"}
-            alt="Amare Energy+ "
+            alt="Amare Energy+"
             href={"https://www.amare.com/1942935/en-us/EnergyPlusSugarFree"}
             localLink="energy-plus-dragon-fruit"
           />
@@ -101,12 +99,12 @@ function DefaultPage() {
             localLink="amare-edge"
           />
         </div>
-      </div>
+      </section>
 
-      <div className="wide-ads">
-        <img src={ad1} alt="Ad 1" />
+      <section className="wide-ads" aria-labelledby="ad1-heading">
+        <img src={ad1} alt="MentaBiotics Ad" />
         <div className="wide-ads-side">
-          <h1>Enjoy MentaBiotics® Raspberry Hibiscus</h1>
+          <h2 id="ad1-heading">Enjoy MentaBiotics® Raspberry Hibiscus</h2>
           <p>
             Live life in full bloom with this berry-botanical twist on our
             best-selling MentaBiotics stick pack, available in refreshing
@@ -117,28 +115,26 @@ function DefaultPage() {
             <button>Shop Now</button>
           </a>
         </div>
-      </div>
+      </section>
 
-      <div className="wide-ads">
+      <section className="wide-ads" aria-labelledby="ad2-heading">
         <div className="wide-ads-side">
-          <h1>Kids Calm</h1>
+          <h2 id="ad2-heading">Kids Calm</h2>
           <p>
             Kids Calm is the perfect solution for parents struggling to get
             their children to sleep. With a blend of B and D vitamins, plus key
             ingredients that support the body's own production of melatonin,
             Kids Calm promotes mind and body relaxation, making it easier for
-            kids to wind down and fall asleep. Say goodbye to bedtime battles
-            and hello to a peaceful night's sleep with the help of Kids Calm.
+            kids to wind down and fall asleep.
           </p>
           <a href="https://www.amare.com/1942935/en-us/kids-calm">
-            <button>Shop Now</button>{" "}
+            <button>Shop Now</button>
           </a>
         </div>
-        <img src={ad2} alt="Ad 2" />
-      </div>
-
+        <img src={ad2} alt="Kids Calm Ad" />
+      </section>
       <footer>
-        <img src={amare} alt="Amare" />
+        <img src={amare} alt="Amare logo" />
         <p id="p">
           This is an Amare Global Independent Distributor website. This site is
           not owned or operated by Amare Global. Any information, views, or
@@ -146,16 +142,16 @@ function DefaultPage() {
           Global. For official information and inquiries, please visit the
           Official Amare Website Amare Brand Partner #1942935
         </p>
-        <div className="footer-side">
+        <address className="footer-side">
           <h4 id="h4">Customer Service</h4>
           <p>
             If you have any questions about your order, please contact customer
             service:
           </p>
           <p>Phone: +1 888-898-8551</p>
-        </div>
+        </address>
       </footer>
-    </div>
+    </main>
   );
 }
 
