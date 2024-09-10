@@ -1,4 +1,4 @@
-const fs = require("fs");
+/*const fs = require("fs");
 const path = require("path");
 const xmlbuilder = require("xmlbuilder");
 const content = require("./src/components/pages/Country/content.js");
@@ -235,4 +235,4 @@ hreflangLinks.forEach(link => {
 fs.writeFileSync(
   path.join(__dirname, "public", "sitemap.xml"),
   urlset.end({ pretty: true })
-);
+);*/
