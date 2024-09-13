@@ -31,8 +31,8 @@ function App() {
               <Route path="sign-up-or-log-in-to-amare" element={<SignupLinks />} />
               <Route path="information/:slug" element={<CountrySignup />} />
               {/* Blog Routes */}
-              <Route path="blog" element={<BlogList />} />  {/* Blog listesi */}
-              <Route path="blog/:id" element={<BlogDetail />} />  {/* Blog detayı */}
+              <Route path="blogs" element={<BlogList />} />  {/* Blog listesi */}
+              <Route path="blogs/:link" element={<BlogDetail />} />  {/* Blog detayı */}
 
             </Route>
           </Routes>

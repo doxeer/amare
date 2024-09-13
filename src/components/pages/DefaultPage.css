@@ -112,6 +112,32 @@ body {
   color: black;
 }
 
+.blogs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+.blog-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 60px;
+  background-color: purple;
+  color: white;
+  border: 1px solid purple;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.blog-button strong{
+  font-size: 18px;
+}
+.blog-button:hover{
+  background-color: white;
+  color: purple;
+  transition: background-color 0.3s ease;
+}
 
 footer {
   display: flex;

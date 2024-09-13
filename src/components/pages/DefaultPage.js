@@ -11,6 +11,7 @@ import ad2 from "../images/ad2.jpeg";
 import Product from "./Product";
 import amare from "../images/amare.png";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 function DefaultPage() {
   const settings = {
@@ -22,9 +23,8 @@ function DefaultPage() {
     autoplay: true,
     autoplaySpeed: 3000,
   };
-
   const images = [amarebanner1, amarebanner2];
-
+  const navigate = useNavigate();
   return (
     <main className="defaultPage" id="start">
       <Helmet>
@@ -132,6 +132,17 @@ function DefaultPage() {
           </a>
         </article>
         <img src={ad2} alt="Kids Calm Ad" />
+      </section>
+      <section className="blogs">
+        <h2>You Can Access Our Blog Pages Here</h2>
+        <p>
+          Visit our blog pages to explore the latest articles and news on health
+          and products. Read our articles on health and products and click now
+          to stay updated with the latest information.
+        </p>
+        <div className="blog-button" onClick={()=>navigate('/blogs')}>
+          <strong>Blogs</strong>
+        </div>
       </section>
       <footer>
         <img src={amare} alt="Amare logo" />
