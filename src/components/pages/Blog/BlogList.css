@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 70%;
+  margin: 0 auto;
 }
 
 .card-container {
@@ -25,14 +26,17 @@
   width: 60%;
   gap: 20px;
 }
+
 .card > img {
   height: 150px;
   width: 30%;
   border-radius: 6px;
 }
+
 .card > img:hover {
   animation: buyut 1s forwards;
 }
+
 @keyframes buyut {
   0% {
     transform: scale(1);
@@ -41,9 +45,11 @@
     transform: scale(1.1);
   }
 }
+
 .card-title {
   margin: 0 0 10px;
 }
+
 .card-right {
   display: flex;
   flex-direction: column;
@@ -51,8 +57,8 @@
   justify-content: center;
   text-align: center;
   width: 70%;
-  /* max-width: 50%; */
 }
+
 .card-link {
   color: #007bff;
   max-width: 90px;
@@ -62,4 +68,53 @@
 
 .card-link:hover {
   text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .blog-list {
+    width: 90%;
+  }
+
+  .card {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card > img {
+    width: 80%;
+    height: auto;
+  }
+
+  .card-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .card > img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 10px;
+  }
+
+  .card > img {
+    width: 80%;
+  }
+
+  .card-right {
+    width: 100%;
+  }
 }
