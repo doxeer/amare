@@ -29,7 +29,7 @@ function BlogList() {
       <div className="card-container">
         {blogPosts.map((post) => (
           <div className="card" key={post.id}>
-           <img src={post.imageURL}/>
+           <img src={post.imageURL} alt="blog-image"/>
             <div className="card-right">
               <h3 className="card-title">{post.title}</h3>
               <div

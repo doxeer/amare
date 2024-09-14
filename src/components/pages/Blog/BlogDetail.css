@@ -23,7 +23,7 @@
 
 .blog-image {
   max-width: 100%;
-  height: auto;
+  height: 400px;
   margin-bottom: 20px;
 }
 
@@ -67,8 +67,8 @@
 }
 
 .product-image-1 {
-  max-width: 100%;
-  height: auto;
+  max-width: 150px;
+  height: 150px;
   border-radius: 4px;
 }
 
@@ -77,10 +77,10 @@
   margin-top: 10px;
   font-weight: 500;
 }
-.product-image-1{
+/* .product-image-1{
   width: 100px;
   height: auto; 
-}
+} */
 
 
 /* Tags section */
