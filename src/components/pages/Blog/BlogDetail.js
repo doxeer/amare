@@ -1,11 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { blogPosts } from './data';
 import './BlogDetail.css'; 
 
 function BlogDetail() {
-  const { id } = useParams();
-  const post = blogPosts.find(p => p.id === parseInt(id));
+  const location = useLocation();
+  const link = location.pathname.split('/').pop();
+  const post = blogPosts.find(p => p.link === link);
 
   if (!post) {
     return <h2>Post not found</h2>;
