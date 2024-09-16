@@ -7,7 +7,7 @@ const SearchBar = ({ onSearch }) => {
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
-    onSearch(e.target.value); // Arama sorgusunu üst bileşene iletir
+    onSearch(e.target.value);
   };
 
   return (

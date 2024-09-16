@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import urunListe from "./urunListe";
-import SearchBar from "./SearchBar"; // SearchBar bileşenini içe aktar
+import SearchBar from "./SearchBar";
 import "./Products.css";
 
 function ProductCard({ product }) {
@@ -76,9 +76,13 @@ const ProductList = () => {
         <SearchBar onSearch={handleSearch} />
       </header>
       <article className="product-list">
-        {filteredProducts.map((product) => (
-          <ProductCard key={product.linkName} product={product} />
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <ProductCard key={product.linkName} product={product} />
+          ))
+        ) : (
+          <p>No products found</p>
+        )}
       </article>
     </section>
   );

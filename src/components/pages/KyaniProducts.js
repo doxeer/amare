@@ -91,7 +91,7 @@ KyaniProducts.map((product) => (
   <div key={product.id}>
     <Link
       to={`/${product.linkName}`}
-      state={product} // ProductPage'e product objesini state olarak gönderiyoruz
+      state={product}
     >
       {product.name}
     </Link>
