@@ -13,6 +13,8 @@ import SignupLinks from './components/pages/Country/SignupLinks'
 import CountrySignup from './components/pages/Country/CountrySignup'
 import BlogList from './components/pages/Blog/BlogList';
 import BlogDetail from './components/pages/Blog/BlogDetail';
+import AdminPanel from "../src/components/pages/Admin/AdminPanel";
+
 
 function App() {
   return (
@@ -32,7 +34,7 @@ function App() {
               {/* Blog Routes */}
               <Route path="blogs" element={<BlogList />} />  {/* Blog listesi */}
               <Route path="blogs/:link" element={<BlogDetail />} />  {/* Blog detayı */}
-        
+              <Route path="admin" element={<AdminPanel />} /> 
             </Route>
           </Routes>
         </div>
