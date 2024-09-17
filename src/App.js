@@ -14,7 +14,6 @@ import CountrySignup from './components/pages/Country/CountrySignup'
 import BlogList from './components/pages/Blog/BlogList';
 import BlogDetail from './components/pages/Blog/BlogDetail';
 
-
 function App() {
   return (
     <HelmetProvider>
@@ -33,7 +32,7 @@ function App() {
               {/* Blog Routes */}
               <Route path="blogs" element={<BlogList />} />  {/* Blog listesi */}
               <Route path="blogs/:link" element={<BlogDetail />} />  {/* Blog detayı */}
-
+        
             </Route>
           </Routes>
         </div>
