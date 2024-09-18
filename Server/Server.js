@@ -1,8 +1,12 @@
 const express = require("express");
 const mysql = require("mysql2");
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
 const port = 5000;
+require("dotenv").config(); // .env dosyasını yükle
+
+const adminUsername = process.env.ADMIN_USERNAME;
+const adminPassword = process.env.ADMIN_PASSWORD;
 
 // Middleware
 app.use(cors());
@@ -11,38 +15,58 @@ app.use(express.urlencoded({ extended: true }));
 
 // MySQL bağlantı havuzu
 const pool = mysql.createPool({
-  host: "82.197.82.52",
-  user: "u424757938_dox",
-  password: "Doruk210201",
-  database: "u424757938_comments",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0
+  queueLimit: 0,
 });
 const promisePool = pool.promise();
 
-// Yorumları alma (Onaylı yorumları göster)
-app.get("/api/comments/:productId", async (req, res) => {
-  const productId = req.params.productId;
+// Giriş yapma
+app.post("/api/admin/login", async (req, res) => {
+  const { username, password } = req.body;
   try {
-    const [rows] = await promisePool.query(
-      "SELECT * FROM comments WHERE product_id = ? AND approved = 1", 
-      [productId]
-    );
-    res.json(rows);
+    if (username === adminUsername && password === adminPassword) {
+      res.status(200).send("Login successful");
+    } else {
+      res.status(401).send("Invalid username or password");
+    }
   } catch (err) {
     console.error(err);
-    res.status(500).send("Error fetching comments");
+    res.status(500).send("Error logging in");
   }
 });
 
-// Yorum ekleme
+// Middleware to check if the request is authenticated
+const authenticateAdmin = (req, res, next) => {
+  const authHeader = req.headers['authorization'];
+  if (!authHeader) {
+    return res.status(401).send("Unauthorized: No credentials sent!");
+  }
+
+  const [scheme, credentials] = authHeader.split(' ');
+  if (scheme !== 'Basic' || !credentials) {
+    return res.status(401).send("Unauthorized: Invalid credentials!");
+  }
+
+  const [username, password] = Buffer.from(credentials, 'base64').toString().split(':');
+  if (username === adminUsername && password === adminPassword) {
+    next(); // User is authenticated
+  } else {
+    res.status(403).send("Forbidden: Invalid credentials");
+  }
+};
+
+// Yorumları ekleme
 app.post("/api/comments", async (req, res) => {
   const { productId, comment, user_name, rating } = req.body;
   const finalRating = rating != null ? rating : 0; // rating mevcutsa kullan, değilse 0 olarak ayarla
   try {
     await promisePool.query(
-      "INSERT INTO comments (product_id, comment, user_name, rating, approved) VALUES (?, ?, ?, ?, 0)", 
+      "INSERT INTO comments (product_id, comment, user_name, rating, approved) VALUES (?, ?, ?, ?, 0)",
       [productId, comment, user_name, finalRating]
     );
     res.status(201).send("Comment added successfully, pending approval.");
@@ -52,10 +76,12 @@ app.post("/api/comments", async (req, res) => {
   }
 });
 
-// Admin paneli: Onaylanmamış yorumları listeleme
-app.get("/api/admin/comments", async (req, res) => {
+// Admin paneli: Yorumları listeleme
+app.get("/api/admin/comments", authenticateAdmin, async (req, res) => {
   try {
-    const [rows] = await promisePool.query("SELECT * FROM comments WHERE approved = 0");
+    const [rows] = await promisePool.query(
+      "SELECT * FROM comments WHERE approved = 0"
+    );
     res.json(rows);
   } catch (err) {
     console.error(err);
@@ -64,29 +90,38 @@ app.get("/api/admin/comments", async (req, res) => {
 });
 
 // Admin paneli: Yorum onaylama
-app.post("/api/admin/comments/:id/approve", async (req, res) => {
-  const commentId = req.params.id;
-  const { approved } = req.body; // approved = 1 ise onayla, 0 ise reddet
-  try {
-    await promisePool.query("UPDATE comments SET approved = ? WHERE id = ?", [approved, commentId]);
-    res.status(200).send("Comment status updated");
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error updating comment status");
+app.post(
+  "/api/admin/comments/:id/approve",
+  authenticateAdmin,
+  async (req, res) => {
+    const commentId = req.params.id;
+    try {
+      await promisePool.query("UPDATE comments SET approved = 1 WHERE id = ?", [
+        commentId,
+      ]);
+      res.status(200).send("Comment approved successfully");
+    } catch (err) {
+      console.error(err);
+      res.status(500).send("Error approving comment");
+    }
   }
-});
+);
 
-// Admin paneli: Yorum reddetme (silme)
-app.post("/api/admin/comments/:id/reject", async (req, res) => {
-  const commentId = req.params.id;
-  try {
-    await promisePool.query("DELETE FROM comments WHERE id = ?", [commentId]);
-    res.status(200).send("Comment deleted successfully");
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error deleting comment");
+// Admin paneli: Yorum reddetme
+app.post(
+  "/api/admin/comments/:id/reject",
+  authenticateAdmin,
+  async (req, res) => {
+    const commentId = req.params.id;
+    try {
+      await promisePool.query("DELETE FROM comments WHERE id = ?", [commentId]);
+      res.status(200).send("Comment deleted successfully");
+    } catch (err) {
+      console.error(err);
+      res.status(500).send("Error deleting comment");
+    }
   }
-});
+);
 
 // Sunucuyu başlat
 app.listen(port, () => {
