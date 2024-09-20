@@ -76,6 +76,21 @@ app.post("/api/comments", async (req, res) => {
   }
 });
 
+// Belirli bir ürünün yorumlarını getirme
+app.get("/api/comments/:productId", async (req, res) => {
+  const productId = req.params.productId;
+  try {
+    const [rows] = await promisePool.query(
+      "SELECT * FROM comments WHERE product_id = ? AND approved = 1",
+      [productId]
+    );
+    res.json(rows); // Onaylanmış yorumları döndür
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error fetching comments");
+  }
+});
+
 // Admin paneli: Yorumları listeleme
 app.get("/api/admin/comments", authenticateAdmin, async (req, res) => {
   try {
