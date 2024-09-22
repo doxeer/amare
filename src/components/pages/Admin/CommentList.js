@@ -9,15 +9,16 @@ const CommentList = ({ productId }) => {
     const fetchComments = async () => {
       try {
         const response = await axios.get(`http://localhost:5000/api/comments/${productId}`);
-        setComments(response.data.filter(comment => comment.approved === 1)); // Sadece onaylanmış yorumları filtrele
+        console.log("Yorumlar:", response.data); // Veriyi logla
+        setComments(response.data.filter(comment => comment.approved === 1));
       } catch (err) {
         console.error('Error fetching comments:', err);
       }
     };
-
+  
     fetchComments();
   }, [productId]);
-
+  
   return (
     <div>
       <h2 style={{margin:'0'}}>Comments</h2>
