@@ -16,19 +16,15 @@ import BlogDetail from './components/pages/Blog/BlogDetail';
 import AdminLogin from "./components/pages/Admin/AdminLogin";
 import AdminPanel from "./components/pages/Admin/AdminPanel";
 
-// Dummy function to check if the user is authenticated
-const isAuthenticated = () => {
+// PrivateRoute ile koruma
+const PrivateRoute = ({ element }) => {
   const token = localStorage.getItem('adminToken');
-  return token ? true : false;
+  return token ? element : <Navigate to="/admin/login" />;
 };
 
 // Handle login success
 const handleLoginSuccess = () => {
   // Logic for handling successful login, if needed
-};
-
-const PrivateRoute = ({ element }) => {
-  return isAuthenticated() ? element : <Navigate to="/admin/login" />;
 };
 
 function App() {

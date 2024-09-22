@@ -10,16 +10,11 @@ const AdminLogin = ({ onLoginSuccess }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', {
-        username,
-        password,
-      });
+      const response = await axios.post('http://localhost:5000/api/admin/login', { username, password });
       if (response.status === 200) {
-        // Giriş başarılı
-        localStorage.setItem('adminUsername', username);
-        localStorage.setItem('adminPassword', password);
-        localStorage.setItem('adminToken', 'dummy_token'); // Gerçek token kullanılması gerekebilir
-        onLoginSuccess(); // Giriş başarılıysa bu işlev çağrılır
+        // JWT token'ı kaydet
+        localStorage.setItem('adminToken', response.data.token);
+        onLoginSuccess(); // Başarılı giriş sonrası işlem
         navigate('/admin');
       }
     } catch (err) {

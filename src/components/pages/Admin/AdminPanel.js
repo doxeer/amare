@@ -3,15 +3,14 @@ import axios from 'axios';
 
 const AdminPanel = () => {
   const [comments, setComments] = useState([]);
-  const adminUsername = localStorage.getItem('adminUsername');
-  const adminPassword = localStorage.getItem('adminPassword');
 
   useEffect(() => {
     const fetchUnapprovedComments = async () => {
+      const token = localStorage.getItem('adminToken');
       try {
         const response = await axios.get('http://localhost:5000/api/admin/comments', {
           headers: {
-            'Authorization': `Basic ${btoa(`${adminUsername}:${adminPassword}`)}` // `Basic` şemasıyla birlikte base64 encoding
+            'Authorization': `Bearer ${token}`
           }
         });
         setComments(response.data);
@@ -21,32 +20,33 @@ const AdminPanel = () => {
     };
 
     fetchUnapprovedComments();
-  },);
+  }, []);
 
   const handleApproval = async (id) => {
+    const token = localStorage.getItem('adminToken');
     try {
       await axios.post(`http://localhost:5000/api/admin/comments/${id}/approve`, {}, {
         headers: {
-          'Authorization': `Basic ${btoa(`${adminUsername}:${adminPassword}`)}`
+          'Authorization': `Bearer ${token}`
         }
       });
       setComments(comments.filter(comment => comment.id !== id));
     } catch (err) {
-      console.error('Error updating comment status:', err);
+      console.error('Error approving comment:', err);
     }
   };
- 
 
   const handleReject = async (id) => {
+    const token = localStorage.getItem('adminToken');
     try {
       await axios.post(`http://localhost:5000/api/admin/comments/${id}/reject`, {}, {
         headers: {
-          'Authorization': `Basic ${btoa(`${adminUsername}:${adminPassword}`)}`
+          'Authorization': `Bearer ${token}`
         }
       });
       setComments(comments.filter(comment => comment.id !== id));
     } catch (err) {
-      console.error('Error deleting comment:', err);
+      console.error('Error rejecting comment:', err);
     }
   };
 
