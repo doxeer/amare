@@ -20,7 +20,7 @@ const CommentList = ({ productId }) => {
 
   return (
     <div>
-      <h2>Comments</h2>
+      <h2 style={{margin:'0'}}>Comments</h2>
       <ul>
         {comments.map((comment) => (
           <li key={comment.id}>
