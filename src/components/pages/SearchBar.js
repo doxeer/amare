@@ -18,7 +18,7 @@ const SearchBar = ({ onSearch }) => {
         value={query}
         onChange={handleInputChange}
       />
-    </div>//asdsadsadsadsda
+    </div>
   );
 };
 
