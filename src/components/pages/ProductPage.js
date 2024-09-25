@@ -4,6 +4,8 @@ import urunListe from "./urunListe";
 import "./ProductPage.css";
 import KyaniProducts from "./KyaniProducts";
 import RelatedProducts from "./RelatedProducts";
+import CommentForm from "./Admin/CommentForm";
+import CommentList from "./Admin/CommentList";
 
 function ProductPage() {
   const { linkName } = useParams();
@@ -16,6 +18,7 @@ function ProductPage() {
     navigate("/", { replace: true });
     return null;
   }
+
   const relatedProducts = urunListe
     .filter(
       (item) => item.category === product.category && item.id !== product.id
@@ -59,6 +62,11 @@ function ProductPage() {
       </div>
       <div className="related-products">
         <RelatedProducts products={relatedProducts} />
+      </div>
+      {/* Yorumlar */}
+      <div className="comments-section">
+        <CommentForm productId={product.id} />
+        <CommentList productId={product.id} />
       </div>
     </div>
   );
