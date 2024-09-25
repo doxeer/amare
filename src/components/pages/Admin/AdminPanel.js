@@ -39,7 +39,7 @@ const AdminPanel = () => {
   const handleReject = async (id) => {
     const token = localStorage.getItem('adminToken');
     try {
-      await axios.post(`http://localhost:5000/api/admin/comments/${id}/reject`, {}, {
+      await axios.delete(`http://localhost:5000/api/admin/comments/${id}/reject`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
